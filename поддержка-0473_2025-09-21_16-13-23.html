@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0473</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png?ex=68d0eaae&is=68cf992e&hm=a6597f782f6f31f4b45c63d2e57e74f7f39c14556c7112d4e85c5dc69842d973&=&format=webp&quality=lossless&width=80&height=72"/>
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1381973356202430546/b671161241af45973b8ab89e762346f2.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "878565267557470279": {"author": "wajiksss", "avatar": "https://cdn.discordapp.com/avatars/878565267557470279/35feabe12f5d9a2b5f67c889e9add4d7.png?size=1024", "roleColor": "#51c4fc", "roleIcon": "https://cdn.discordapp.com/role-icons/1416225044895498240/decf9957f4c0361927abcfc85242e902.png?size=1024", "roleName": "VIP", "bot": false, "verified": false}, "625255619569647616": {"author": "[MG-014] siksty", "avatar": "https://cdn.discordapp.com/avatars/625255619569647616/3a7d76eafde522ba4c39adf15fcaffb4.png?size=1024", "roleColor": "#dda0dd", "roleIcon": "https://cdn.discordapp.com/role-icons/1411779306333405376/090ae455e895868b024ab33562e8b18f.png?size=1024", "roleName": "Сын Дипломата", "bot": false, "verified": false}, "342692728527650820": {"author": "[MG-019] Kopobo4kiN", "avatar": "https://cdn.discordapp.com/avatars/342692728527650820/bed1aa0633244e69ea16819db5683186.png?size=1024", "roleColor": "#bf0000", "roleIcon": "https://cdn.discordapp.com/role-icons/1368562256891084901/4176cc015b0c76919fdf746b1d057e11.png?size=1024", "roleName": "Менеджер по Операциям", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+body {
+  background: #36393f;
+  color: #dcddde;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* Реакции как стандартные Discord */
+.reactions {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 4px !important;
+  margin-top: 4px;
+}
+.reaction {
+  display: flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  background: rgba(24, 25, 28, 0.5) !important;
+  border: 1px solid rgba(79, 84, 92, 0.3) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #dcddde !important;
+  cursor: default !important;
+}
+.reaction img {
+  height: 16px !important;
+  width: 16px !important;
+  vertical-align: middle !important;
+}
+#lightboxOverlay {
+  display:none;position:fixed;z-index:99999;top:0;left:0;width:100vw;height:100vh;background:rgba(20,20,30,0.97);align-items:center;justify-content:center;
+}
+#lightboxOverlay img {
+  max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 2px 24px #000;
+}
+span[style*="font-size:1.6em"] { 
+  color: #fff; 
+  display: block;
+  margin: 8px 0;
+}
+span[style*="font-size:1.3em"] { 
+  color: #fff; 
+  display: block;
+  margin: 6px 0;
+}
+span[style*="font-size:1.1em"] { 
+  color: #fff; 
+  display: block;
+  margin: 4px 0;
+}
+small {
+  font-size: 0.875em;
+  color: #72767d;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 4px;
+}
+strong { font-weight: 600; }
+em { font-style: italic; }
+u { text-decoration: underline; }
+del { text-decoration: line-through; }
+/* Стили для упоминаний */
+span[style*="color: #5865f2"] {
+  color: #5865f2 !important;
+  background: rgba(88, 101, 242, 0.1) !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  font-weight: 500 !important;
+}
+/* Исправление для attachments */
+discord-attachments {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+discord-attachment[type="image"] {
+  display: block !important;
+  max-width: 100% !important;
+  border-radius: 8px !important;
+}
+discord-attachment[type="image"] img {
+  max-height: 160px !important;
+  cursor: zoom-in !important;
+  border-radius: 8px !important;
+}
+</style>
+<script type="text/javascript">
+
+document.addEventListener("click",t=>{
+  let e=t.target;if(!e)return;
+  let o = e.getAttribute && e.getAttribute("data-goto");
+  if(o){
+    let r=document.getElementById(`m-${o}`);
+    if(r){
+      r.scrollIntoView({behavior:"smooth",block:"center"});
+      r.style.backgroundColor="rgba(148,156,247,0.1)";
+      r.style.transition="background-color 0.5s ease";
+      setTimeout(()=>{r.style.backgroundColor="transparent"},1e3);
+    }else{
+      console.warn("Message "+o+" not found.");
+    }
+  }
+  // Lightbox for images
+  if(e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+    let src = e.getAttribute("src");
+    if (!src && e.querySelector && e.querySelector('img')) src = e.querySelector('img').src;
+    let overlay = document.getElementById('lightboxOverlay');
+    let img = document.getElementById('lightboxImg');
+    overlay.style.display = 'flex';
+    img.src = src;
+  }
+});
+window.addEventListener("DOMContentLoaded",()=>{
+  let overlay = document.getElementById('lightboxOverlay');
+  overlay && overlay.addEventListener('click',()=>{overlay.style.display='none';});
+});
+
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@^3.6.1/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png?ex=68d0eaae&is=68cf992e&hm=a6597f782f6f31f4b45c63d2e57e74f7f39c14556c7112d4e85c5dc69842d973&=&format=webp&quality=lossless&width=80&height=72" timestamp="2025-09-21_16-13-23">Ticket closed.<br/>Reason: Разобрали<br/><a href="https://moscow-roleplay.github.io/transcripts/поддержка-0473_2025-09-21_16-13-23.html" style="color: #00aff4;">https://moscow-roleplay.github.io/transcripts/поддержка-0473</a></discord-message>
+<discord-message id="m-1418654903424778261" timestamp="2025-09-19T20:48:06.310000Z" profile="1381962421588988074"><span style="color: #5865f2; background: rgba(88, 101, 242, 0.1); padding: 2px 4px; border-radius: 3px; font-weight: 500;">@wajiksss</span></discord-message>
+<discord-message id="m-1418654906906054736" timestamp="2025-09-19T20:48:07.140000Z" profile="1381962421588988074"><discord-embed embed-title="📨 Новый тикет — Поддержка" slot="embeds" color="#006800" thumbnail="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png?ex=68d0eaae&is=68cf992e&hm=a6597f782f6f31f4b45c63d2e57e74f7f39c14556c7112d4e85c5dc69842d973&format=webp&quality=lossless&width=1013&height=915&"><discord-embed-fields slot="fields"><discord-embed-field fieldTitle="**Ваш никнейм в Discord:**">21wajikssofresh</discord-embed-field><discord-embed-field fieldTitle="**Ваш никнейм в Roblox:**">wajiksss</discord-embed-field><discord-embed-field fieldTitle="**В чём проблема:**">требую видео фиксацию по моему ФРП (Кот)</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="waj1ks" icon="https://cdn.discordapp.com/avatars/878565267557470279/35feabe12f5d9a2b5f67c889e9add4d7.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1418657091417149636" timestamp="2025-09-19T20:56:47.968000Z" profile="625255619569647616">Ожидайте</discord-message>
+<discord-message id="m-1418979952690335744" timestamp="2025-09-20T18:19:44.094000Z" profile="342692728527650820">Здравствуйте <span style="color: #5865f2; background: rgba(88, 101, 242, 0.1); padding: 2px 4px; border-radius: 3px; font-weight: 500;">@wajiksss</span>  👋! Я Kopobo4kiN, Менеджер сообщества Moscow RolePlay. Спасибо, что обратились в тикет.  На данный момент ваш тикет рассматриваю я. Если возникнет необходимость, я передам тикет сотруднику с более высоким рангом или сообщу о временном уходе.<br/><br/><br/>Видеофиксация :<discord-attachments slot="attachments"><discord-attachment type="video" filename="SPOILER_0919.mp4" url="attachments/1418979952690335744_1418979951448690769.mp4"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1418980518237700149" timestamp="2025-09-20T18:21:58.931000Z" profile="878565267557470279">а</discord-message>
+<discord-message id="m-1418980551242682490" timestamp="2025-09-20T18:22:06.800000Z" profile="878565267557470279">и в чем смысл откатывать это</discord-message>
+<discord-message id="m-1418980608759042130" timestamp="2025-09-20T18:22:20.513000Z" profile="878565267557470279">в реальной жизни когда машины 10кмч едет в горку</discord-message>
+<discord-message id="m-1418980670801449101" timestamp="2025-09-20T18:22:35.305000Z" profile="878565267557470279">это не будет смертельным исходом</discord-message>
+<discord-message id="m-1418980767329030224" timestamp="2025-09-20T18:22:58.319000Z" profile="878565267557470279">или как минимум это не может являться тем что может основательно остановить машину</discord-message>
+<discord-message id="m-1418997087403507723" timestamp="2025-09-20T19:27:49.328000Z" profile="342692728527650820">Так вы врезались в заграждение (Опору моста), далее в патрульный автомобиль, и как не в чем не бывало поехали дальше</discord-message>
+<discord-message id="m-1418997869746327682" timestamp="2025-09-20T19:30:55.853000Z" profile="342692728527650820"><span style="color: #5865f2; background: rgba(88, 101, 242, 0.1); padding: 2px 4px; border-radius: 3px; font-weight: 500;">@wajiksss</span> тикет закрываю?</discord-message>
+<discord-message id="m-1418998280645513259" timestamp="2025-09-20T19:32:33.819000Z" profile="878565267557470279">я врезался только наверху уже</discord-message>
+<discord-message id="m-1418998302195581092" timestamp="2025-09-20T19:32:38.957000Z" profile="878565267557470279">там</discord-message>
+<discord-message id="m-1418998323452444813" timestamp="2025-09-20T19:32:44.025000Z" profile="342692728527650820">Ну а я о чем</discord-message>
+<discord-message id="m-1418998346281914398" timestamp="2025-09-20T19:32:49.468000Z" profile="342692728527650820">вы дальше продолжили погоню</discord-message>
+<discord-message id="m-1418998449663119421" timestamp="2025-09-20T19:33:14.116000Z" profile="878565267557470279"><discord-attachments slot="attachments"><discord-attachment type="image" filename="remix-838b2894-599d-42fe-be9c-e78f0a661178.png" url="attachments/1418998449663119421_1418998449373708289.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1418998456802086952" timestamp="2025-09-20T19:33:15.818000Z" profile="878565267557470279">тут</discord-message>
+<discord-message id="m-1418998974064496881" timestamp="2025-09-20T19:35:19.143000Z" profile="342692728527650820">Нарушение на видео есть, смысла Вам спорить о нарушение не вижу.</discord-message>
+<discord-message id="m-1418998995094868111" timestamp="2025-09-20T19:35:24.157000Z" profile="342692728527650820">тикет закрываю</discord-message>
+<discord-message id="m-1418999164041298003" timestamp="2025-09-20T19:36:04.437000Z" profile="878565267557470279">смысл есть так как это столкновение не являлось бы в жизни причиной остановки машины</discord-message>
+<discord-message id="m-1418999233935048805" timestamp="2025-09-20T19:36:21.101000Z" profile="878565267557470279">понятно если бы я сотку летел и в ограждение врезался</discord-message>
+<discord-message id="m-1418999244479529154" timestamp="2025-09-20T19:36:23.615000Z" profile="878565267557470279">а так</discord-message>
+<discord-message id="m-1418999358904340541" timestamp="2025-09-20T19:36:50.896000Z" profile="342692728527650820">Передаю тикет, и последнее слово <span style="color: #5865f2; background: rgba(88, 101, 242, 0.1); padding: 2px 4px; border-radius: 3px; font-weight: 500;">@Pancakeboyman_8</span></discord-message>
+<discord-message id="m-1419008887016915157" timestamp="2025-09-20T20:14:42.575000Z" profile="1133665013794607114">Наказание выдано верно</discord-message>
+</discord-messages></body></html>
