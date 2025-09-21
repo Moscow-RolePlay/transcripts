@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0489</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png?ex=68d0eaae&is=68cf992e&hm=a6597f782f6f31f4b45c63d2e57e74f7f39c14556c7112d4e85c5dc69842d973&=&format=webp&quality=lossless&width=80&height=72"/>
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1381973356202430546/b671161241af45973b8ab89e762346f2.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+discord-reactions {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 4px !important;
+  margin-top: 4px;
+}
+discord-reaction {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(79, 84, 92, 0.16);
+  border: 1px solid rgba(79, 84, 92, 0.24);
+  font-size: 14px;
+  min-width: auto !important;
+}
+#lightboxOverlay {
+  display:none;position:fixed;z-index:99999;top:0;left:0;width:100vw;height:100vh;background:rgba(20,20,30,0.97);align-items:center;justify-content:center;
+}
+#lightboxOverlay img {
+  max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 2px 24px #000;
+}
+span[style*="font-size:1.6em"] { color: #fff; }
+span[style*="font-size:1.3em"] { color: #fff; }
+span[style*="font-size:1.1em"] { color: #fff; }
+/* Исправление для дублирующихся attachments */
+discord-message > discord-attachments:only-child {
+  margin: 8px 0;
+}
+discord-message > discord-attachments:last-child {
+  margin-bottom: 8px;
+}
+</style>
+<script type="text/javascript">
+
+document.addEventListener("click",t=>{
+  let e=t.target;if(!e)return;
+  let o = e.getAttribute && e.getAttribute("data-goto");
+  if(o){
+    let r=document.getElementById(`m-${o}`);
+    if(r){
+      r.scrollIntoView({behavior:"smooth",block:"center"});
+      r.style.backgroundColor="rgba(148,156,247,0.1)";
+      r.style.transition="background-color 0.5s ease";
+      setTimeout(()=>{r.style.backgroundColor="transparent"},1e3);
+    }else{
+      console.warn("Message "+o+" not found.");
+    }
+  }
+  // Lightbox for images
+  if(e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+    let src = e.getAttribute("src");
+    if (!src && e.querySelector && e.querySelector('img')) src = e.querySelector('img').src;
+    let overlay = document.getElementById('lightboxOverlay');
+    let img = document.getElementById('lightboxImg');
+    overlay.style.display = 'flex';
+    img.src = src;
+  }
+});
+window.addEventListener("DOMContentLoaded",()=>{
+  let overlay = document.getElementById('lightboxOverlay');
+  overlay && overlay.addEventListener('click',()=>{overlay.style.display='none';});
+});
+
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@^3.6.1/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script>
+</head>
+<body style="margin:0;min-height:100vh">
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png?ex=68d0eaae&is=68cf992e&hm=a6597f782f6f31f4b45c63d2e57e74f7f39c14556c7112d4e85c5dc69842d973&=&format=webp&quality=lossless&width=80&height=72" timestamp="2025-09-21_15-28-59">Ticket closed.<br/>Reason: Не указана<br/><a href="https://moscow-roleplay.github.io/transcripts/поддержка-0489_2025-09-21_15-28-59.html">https://moscow-roleplay.github.io/transcripts/поддержка-0489_2025-09-21_15-28-59.html</a></discord-message>
+<discord-message id="m-1419299118978830467" timestamp="2025-09-21T15:27:59.267000Z" profile="1381962421588988074">&lt;span style="color: #5865f2; background: rgba(88, 101, 242, 0.1); padding: 2px 4px; border-radius: 3px; font-weight: 500;"&gt;@Pancakeboyman_8&lt;/span&gt;</discord-message>
+<discord-message id="m-1419299122590122056" timestamp="2025-09-21T15:28:00.128000Z" profile="1381962421588988074"><discord-embed embed-title="📨 Новый тикет — Поддержка" slot="embeds" color="#006800" thumbnail="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png?ex=68d0eaae&is=68cf992e&hm=a6597f782f6f31f4b45c63d2e57e74f7f39c14556c7112d4e85c5dc69842d973&format=webp&quality=lossless&width=1013&height=915&"><discord-embed-field slot="fields" field-title="**Ваш никнейм в Discord:**" inline="false">423423</discord-embed-field><discord-embed-field slot="fields" field-title="**Ваш никнейм в Roblox:**" inline="false">4234234234</discord-embed-field><discord-embed-field slot="fields" field-title="**В чём проблема:**" inline="false">23423423423423423</discord-embed-field><discord-embed-author slot="author" name="pancakeboyman_8" icon="https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1419299156278644768" timestamp="2025-09-21T15:28:08.160000Z" profile="1133665013794607114">2342342342342342342324324<discord-reactions slot="reactions"><discord-reaction name="&lt;a:pepesaber:1402207256270864414&gt;" count="1"><discord-custom-emoji name="pepesaber" url="https://cdn.discordapp.com/emojis/1402207256270864414.gif" animated="true"></discord-custom-emoji></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1419299182388187287" timestamp="2025-09-21T15:28:14.385000Z" profile="1133665013794607114"><span style="font-size:1.3em;font-weight:bold;">2342342342342342</span><discord-reactions slot="reactions"><discord-reaction name="⭐" count="1"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b50.svg" alt="⭐" style="height:1em;vertical-align:-0.1em;" /></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1419299205717033021" timestamp="2025-09-21T15:28:19.947000Z" profile="1133665013794607114"><span style="font-size:1.6em;font-weight:bold;">effef</span></discord-message>
+<discord-message id="m-1419299214994837514" timestamp="2025-09-21T15:28:22.159000Z" profile="1133665013794607114"><span style="font-size:1.1em;font-weight:bold;">efefe</span><discord-reactions slot="reactions"><discord-reaction name="&lt;a:wave_animated:1402232137100431390&gt;" count="1"><discord-custom-emoji name="wave_animated" url="https://cdn.discordapp.com/emojis/1402232137100431390.gif" animated="true"></discord-custom-emoji></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1419299226399150162" timestamp="2025-09-21T15:28:24.878000Z" profile="1133665013794607114">**vefgefef**</discord-message>
+<discord-message id="m-1419299249090334841" timestamp="2025-09-21T15:28:30.288000Z" profile="1133665013794607114">-# vefefef<discord-reactions slot="reactions"><discord-reaction name="&lt;a:MRP_Loading:1402209515348295830&gt;" count="1"><discord-custom-emoji name="MRP_Loading" url="https://cdn.discordapp.com/emojis/1402209515348295830.gif" animated="true"></discord-custom-emoji></discord-reaction></discord-reactions></discord-message>
+</discord-messages></body></html>
