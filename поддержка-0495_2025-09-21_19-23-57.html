@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0495</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png?ex=68d0eaae&is=68cf992e&hm=a6597f782f6f31f4b45c63d2e57e74f7f39c14556c7112d4e85c5dc69842d973&=&format=webp&quality=lossless&width=80&height=72"/>
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1381973356202430546/b671161241af45973b8ab89e762346f2.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #40444b;
+}
+#header h1 {
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-size: 2em;
+}
+#header p {
+    color: #72767d;
+    margin: 0;
+}
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.message {
+    display: flex;
+    background: #40444b;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #484c52;
+    transition: background-color 0.2s ease;
+}
+.message:hover {
+    background: #474a50;
+}
+.message-header {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 16px;
+    background: #2f3136;
+    border-bottom: 1px solid #40444b;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+.message-author {
+    font-weight: 600;
+    margin: 0 8px 2px 0;
+    font-size: 0.95em;
+}
+.message-author.bot::after {
+    content: "🤖";
+    margin-left: 4px;
+    font-size: 0.8em;
+}
+.message-roles {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+.role {
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    font-weight: 500;
+}
+.message-timestamp {
+    color: #72767d;
+    font-size: 0.8em;
+    margin-left: auto;
+}
+.message-content {
+    padding: 12px 16px;
+    flex: 1;
+    word-wrap: break-word;
+    line-height: 1.4;
+}
+.message-content:empty {
+    display: none;
+}
+.reply {
+    background: rgba(79, 84, 92, 0.3);
+    border-left: 3px solid #5865f2;
+    padding: 8px 12px;
+    margin: 0 -12px 8px -12px;
+    border-radius: 0 4px 4px 0;
+}
+.reply-author {
+    font-weight: 600;
+    color: #5865f2;
+    font-size: 0.9em;
+}
+.reply-content {
+    color: #b9bbbe;
+    font-size: 0.9em;
+    margin-top: 2px;
+}
+.reply-content a {
+    color: #00aff4;
+}
+.attachments {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px;
+    border-top: 1px solid #40444b;
+    background: #2f3136;
+}
+.attachment {
+    display: flex;
+    align-items: center;
+}
+.attachment-image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+.attachment-image:hover {
+    transform: scale(1.02);
+}
+.attachment-file {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #36393f;
+    border-radius: 4px;
+    border: 1px solid #40444b;
+}
+.file-icon {
+    width: 32px;
+    height: 32px;
+    background: #5865f2;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+.attachment-filename {
+    font-weight: 500;
+    color: #00aff4;
+    word-break: break-all;
+}
+.reactions {
+    display: flex;
+    gap: 4px;
+    padding: 8px 16px;
+    border-top: 1px solid #40444b;
+    background: #2f3136;
+}
+.reaction {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: rgba(24, 25, 28, 0.8);
+    border: 1px solid rgba(79, 84, 92, 0.6);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.reaction:hover {
+    background: rgba(79, 84, 92, 0.3);
+}
+.emoji {
+    height: 18px !important;
+    width: 18px !important;
+    vertical-align: middle !important;
+}
+.emoji-animated {
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-3px); }
+    60% { transform: translateY(-2px); }
+}
+/* Стили для упоминаний */
+.mention {
+    color: #5865f2 !important;
+    background: rgba(88, 101, 242, 0.1) !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    font-weight: 500 !important;
+}
+/* Markdown стили */
+blockquote {
+    border-left: 4px solid #5865f2;
+    padding-left: 12px;
+    margin: 8px 0;
+    color: #b9bbbe;
+    font-style: italic;
+}
+pre {
+    background: #2f3136;
+    border-radius: 4px;
+    padding: 12px;
+    overflow-x: auto;
+    margin: 8px 0;
+    font-family: 'Courier New', monospace;
+}
+code {
+    background: rgba(24, 25, 28, 0.5);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+strong { font-weight: 600; }
+em { font-style: italic; }
+u { text-decoration: underline; }
+del { text-decoration: line-through; }
+a { color: #00aff4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+small { font-size: 0.875em; color: #72767d; }
+ul { list-style-type: disc; padding-left: 20px; margin: 8px 0; }
+li { margin-bottom: 4px; }
+h1, h2, h3 { color: #fff; margin: 8px 0; }
+/* Lightbox */
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(20, 20, 30, 0.97);
+    align-items: center;
+    justify-content: center;
+}
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+/* Embeds */
+.embed {
+    background: #2f3136;
+    border-left: 4px solid #5865f2;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 0 4px 4px 0;
+}
+.embed-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+}
+.embed-description {
+    color: #dcddde;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+.embed-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.embed-field {
+    display: flex;
+    gap: 12px;
+}
+.embed-field.inline {
+    flex: 1;
+}
+.embed-field-title {
+    font-weight: 600;
+    color: #fff;
+    flex: 0 0 30%;
+}
+.embed-field-value {
+    color: #dcddde;
+    flex: 1;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    #container { padding: 10px; }
+    .message { margin-bottom: 12px; }
+    .message-header { padding: 10px; }
+    .message-content { padding: 10px; }
+    .attachments { padding: 10px; }
+}
+</style>
+<script type="text/javascript">
+
+document.addEventListener("click", function(e) {
+    let target = e.target;
+    
+    // Навигация по сообщениям
+    let goto = target.getAttribute && target.getAttribute("data-goto");
+    if (goto) {
+        let message = document.getElementById('m-' + goto);
+        if (message) {
+            message.scrollIntoView({behavior: "smooth", block: "center"});
+            let originalBg = message.style.backgroundColor;
+            message.style.backgroundColor = "rgba(148, 156, 247, 0.1)";
+            message.style.transition = "background-color 0.5s ease";
+            setTimeout(() => {
+                message.style.backgroundColor = originalBg || "transparent";
+            }, 1000);
+        }
+        e.preventDefault();
+        return;
+    }
+    
+    // Lightbox для изображений
+    if (target.matches && (target.matches(".discord-image img, .attachment-image img, img[data-lightbox], .emoji") || 
+        target.closest(".discord-attachment[type=image], .attachment-image"))) {
+        let img = target;
+        if (target.tagName !== 'IMG') {
+            img = target.querySelector ? target.querySelector('img') : null;
+        }
+        if (img && img.src) {
+            let overlay = document.getElementById('lightboxOverlay');
+            let lightboxImg = document.getElementById('lightboxImg');
+            if (overlay && lightboxImg) {
+                overlay.style.display = 'flex';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt || 'Изображение';
+            }
+        }
+    }
+});
+
+// Закрытие lightbox
+document.addEventListener("DOMContentLoaded", function() {
+    let overlay = document.getElementById('lightboxOverlay');
+    if (overlay) {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
+        
+        // Закрытие по Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && overlay.style.display === 'flex') {
+                overlay.style.display = 'none';
+            }
+        });
+    }
+    
+    // Инициализация профилей
+    if (window.$discordMessage && window.$discordMessage.profiles) {
+        window.discordProfiles = window.$discordMessage.profiles;
+    }
+    
+    // Обработка эмодзи
+    function renderEmoji(emojiText) {
+        if (emojiText.startsWith('{EMOJI:')) {
+            try {
+                let encoded = emojiText.slice(7, -1);
+                let emoji = atob(encoded);
+                let codepoints = Array.from(emoji).map(c => c.codePointAt(0).toString(16)).join('-');
+                return `<img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/${codepoints}.svg" 
+                        alt="${emoji}" class="emoji" style="height:18px;width:18px;vertical-align:middle;" loading="lazy"/>`;
+            } catch(e) {
+                return emojiText;
+            }
+        }
+        return emojiText;
+    }
+    
+    // Заменяем эмодзи в контенте
+    let emojiElements = document.querySelectorAll('.message-content [data-emoji]');
+    emojiElements.forEach(el => {
+        let emojiText = el.getAttribute('data-emoji');
+        el.outerHTML = renderEmoji(emojiText);
+    });
+});
+
+</script>
+</head>
+<body>
+<div id="lightboxOverlay">
+    <img id="lightboxImg" src="" alt="Просмотр изображения"/>
+</div>
+<div id="container">
+    <div id="header">
+        <h1>поддержка-0495</h1>
+        <p>Транскрипт чата • 2025-09-21_19-23-57 • Moscow RolePlay</p>
+    </div>
+    <div id="messages">
+
+        <div class="message" id="m-close">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/icons/1331331077553262765/e86ccfc7b7f5f42f36a997ebd447c538.png?size=1024" alt="Сервер" loading="lazy"/>
+                <div>
+                    <div class="message-author">Moscow RolePlay</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #5865f2;">Система</span>
+                    </div>
+                    <div class="message-timestamp">2025-09-21_19-23-57</div>
+                </div>
+            </div>
+            <div class="message-content">
+                <strong>Тикет закрыт</strong><br/>
+                Причина: Не указана<br/>
+                Дата: 2025-09-21_19-23-57<br/>
+                <a href="https://moscow-roleplay.github.io/transcripts/поддержка-0495_2025-09-21_19-23-57.html" style="color: #00aff4; font-weight: 500;">📄 Ссылка на транскрипт</a>
+            </div>
+        </div>
+
+        <div class="message" id="m-1419329938779279372">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024" alt="Moscow RolePlay" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author bot" style="color: #006800;">Moscow RolePlay</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #006800;">Moscow RolePlay</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 17:30:27</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div>&lt;@1133665013794607114&gt;</div>
+                
+                        <div class="embed" style="border-left-color: #006800 !important;">
+                            <div class="embed-title">📨 Новый тикет — Поддержка</div>
+                            
+                            <div class="embed-fields">
+                                <div class="embed-field>
+                                    <div class="embed-field-title">**Ваш никнейм в Discord:**</div>
+                                    <div class="embed-field-value">23423</div>
+                                </div>
+                            
+                                <div class="embed-field>
+                                    <div class="embed-field-title">**Ваш никнейм в Roblox:**</div>
+                                    <div class="embed-field-value">2342342</div>
+                                </div>
+                            
+                                <div class="embed-field>
+                                    <div class="embed-field-title">**В чём проблема:**</div>
+                                    <div class="embed-field-value">234234</div>
+                                </div>
+                            </div>
+                            <div style="color: #72767d; font-size: 0.85em; margin-top: 8px;">⏳ Ожидайте ответа от персонала</div>
+                        </div>
+                        
+            </div>
+            
+            
+        </div>
+
+        <div class="message" id="m-1419330018986954802">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024" alt="Pancakeboyman_8" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author" style="color: #ffffff;">Pancakeboyman_8</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #ffffff;">Владелец</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 17:30:46</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div>ЧТО</div>
+                
+            </div>
+            
+            
+        </div>
+
+        <div class="message" id="m-1419330036552564878">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024" alt="Pancakeboyman_8" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author" style="color: #ffffff;">Pancakeboyman_8</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #ffffff;">Владелец</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 17:30:50</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div>ЧТО ЗА ДЕБМО</div>
+                
+            </div>
+            
+            
+        </div>
+
+        <div class="message" id="m-1419330043741474836">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024" alt="Pancakeboyman_8" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author" style="color: #ffffff;">Pancakeboyman_8</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #ffffff;">Владелец</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 17:30:52</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div>ФУ</div>
+                
+            </div>
+            
+            
+        </div>
+
+        <div class="message" id="m-1419330054856642713">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024" alt="Pancakeboyman_8" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author" style="color: #ffffff;">Pancakeboyman_8</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #ffffff;">Владелец</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 17:30:54</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div>КУТО ОТКРЫЛ</div>
+                
+            </div>
+            
+            
+        </div>
+
+        <div class="message" id="m-1419330087827935305">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024" alt="Pancakeboyman_8" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author" style="color: #ffffff;">Pancakeboyman_8</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #ffffff;">Владелец</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 17:31:02</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div></div>
+                
+            </div>
+            <div class="attachments">
+                            <div class="attachment">
+                                <img class="attachment-image discord-image" src="https://moscow-roleplay.github.io/transcripts/attachments/1419330087827935305_1419330087714558044.png" alt="image.png" data-lightbox loading="lazy"/>
+                            </div>
+                            </div>
+            
+        </div>
+
+        <div class="message" id="m-1419357026752135210">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024" alt="Moscow RolePlay" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author bot" style="color: #006800;">Moscow RolePlay</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #006800;">Moscow RolePlay</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 19:18:05</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div>{EMOJI:8J+Oqw==} Тикет снова открыт для &lt;@1133665013794607114&gt;</div>
+                
+            </div>
+            
+            
+        </div>
+
+        <div class="message" id="m-1419357038965821510">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024" alt="Moscow RolePlay" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author bot" style="color: #006800;">Moscow RolePlay</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #006800;">Moscow RolePlay</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 19:18:08</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div><span style="font-size:1.3em;font-weight:bold;color:#fff;display:block;margin:6px 0;">&lt;a:Thinking:1418620730052055141&gt; Закрытие...</span></div>
+                
+            </div>
+            
+            
+        </div>
+
+        <div class="message" id="m-1419358468619370526">
+            <div class="message-header">
+                <img class="avatar" src="https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024" alt="Moscow RolePlay" loading="lazy"/>
+                <div style="flex: 1; min-width: 0;">
+                    <div class="message-author bot" style="color: #006800;">Moscow RolePlay</div>
+                    <div class="message-roles">
+                        <span class="role" style="background: rgba(88, 101, 242, 0.2); color: #006800;">Moscow RolePlay</span>
+                    </div>
+                    <div class="message-timestamp">21.09.2025 19:23:49</div>
+                </div>
+            </div>
+            <div class="message-content">
+                
+                <div><span style="font-size:1.3em;font-weight:bold;color:#fff;display:block;margin:6px 0;">&lt;a:Thinking:1418620730052055141&gt; Закрытие...</span></div>
+                
+            </div>
+            
+            
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
