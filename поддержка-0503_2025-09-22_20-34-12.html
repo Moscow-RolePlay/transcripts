@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0503</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png"/>
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1381973356202430546/b671161241af45973b8ab89e762346f2.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1301612859515473940": {"author": "Artyem_BOG", "avatar": "https://cdn.discordapp.com/avatars/1301612859515473940/edb7dcdcdccaba85bd6be28b0461b2c0.png?size=1024", "roleColor": "#51c4fc", "roleIcon": "https://cdn.discordapp.com/role-icons/1416225044895498240/decf9957f4c0361927abcfc85242e902.png?size=1024", "roleName": "VIP", "bot": false, "verified": false}, "625255619569647616": {"author": "[MG-014] siksty", "avatar": "https://cdn.discordapp.com/avatars/625255619569647616/3a7d76eafde522ba4c39adf15fcaffb4.png?size=1024", "roleColor": "#dda0dd", "roleIcon": "https://cdn.discordapp.com/role-icons/1411779306333405376/090ae455e895868b024ab33562e8b18f.png?size=1024", "roleName": "Сын Дипломата", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+body {
+  background: #36393f;
+  color: #dcddde;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.reactions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+.reaction {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(24, 25, 28, 0.5);
+  border: 1px solid rgba(79, 84, 92, 0.3);
+  font-size: 12px;
+  font-weight: 500;
+  color: #dcddde;
+  cursor: default;
+}
+.emoji-img {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+#lightboxOverlay {
+  display:none;
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:rgba(20,20,30,0.97);
+  align-items:center;
+  justify-content:center;
+}
+#lightboxOverlay img {
+  max-width:90vw;
+  max-height:90vh;
+  border-radius:8px;
+  box-shadow:0 2px 24px #000;
+}
+strong { font-weight: 600; }
+em { font-style: italic; }
+u { text-decoration: underline; }
+del { text-decoration: line-through; }
+code {
+  background: rgba(24, 25, 28, 0.5);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+pre {
+  background: #2f3136;
+  border-radius: 4px;
+  padding: 12px;
+  overflow-x: auto;
+  margin: 8px 0;
+  font-family: monospace;
+}
+blockquote {
+  border-left: 4px solid #5865f2;
+  padding-left: 12px;
+  margin: 8px 0;
+  color: #b9bbbe;
+}
+a {
+  color: #00aff4;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
+}
+span[style*="font-size:1.6em"] {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin: 8px 0;
+}
+span[style*="font-size:1.3em"] {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin: 6px 0;
+}
+span[style*="font-size:1.1em"] {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin: 4px 0;
+}
+small {
+  font-size: 0.875em;
+  color: #72767d;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 4px;
+}
+.mention {
+  color: #5865f2;
+  background: rgba(88, 101, 242, 0.1);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+discord-attachments {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+discord-attachment[type="image"] {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px;
+}
+discord-attachment[type="image"] img {
+  max-height: 160px;
+  cursor: zoom-in;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+}
+discord-attachment[type="file"] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(24, 25, 28, 0.5);
+  border-radius: 4px;
+  border: 1px solid rgba(79, 84, 92, 0.3);
+}
+discord-attachment-filename {
+  color: #00aff4;
+  font-weight: 500;
+  word-break: break-all;
+}
+</style>
+<script type="text/javascript">
+
+document.addEventListener("click",t=>{
+  let e=t.target;if(!e)return;
+  let o = e.getAttribute && e.getAttribute("data-goto");
+  if(o){
+    let r=document.getElementById(`m-${o}`);
+    if(r){
+      r.scrollIntoView({behavior:"smooth",block:"center"});
+      r.style.backgroundColor="rgba(148,156,247,0.1)";
+      r.style.transition="background-color 0.5s ease";
+      setTimeout(()=>{r.style.backgroundColor="transparent"},1e3);
+    }else{
+      console.warn("Message "+o+" not found.");
+    }
+  }
+  if(e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+    let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+    if(src) {
+      let overlay = document.getElementById('lightboxOverlay');
+      let img = document.getElementById('lightboxImg');
+      overlay.style.display = 'flex';
+      img.src = src;
+    }
+  }
+});
+window.addEventListener("DOMContentLoaded",()=>{
+  let overlay = document.getElementById('lightboxOverlay');
+  overlay && overlay.addEventListener('click',()=>{overlay.style.display='none';});
+  document.querySelectorAll('.mention').forEach(el => {
+    el.style.cssText = 'color: #5865f2 !important; background: rgba(88, 101, 242, 0.1) !important; padding: 2px 4px !important; border-radius: 3px !important; font-weight: 500 !important;';
+  });
+});
+
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages>
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/e86ccfc7b7f5f42f36a997ebd447c538.png?size=1024" timestamp="2025-09-22_20-34-12">Тикет Закрыт.<br/>Причина: Отзыв получен. Тикет закрыт<br/>Дата: 2025-09-22_20-34-12<br/><a href="https://Moscow-RolePlay.github.io/transcripts/поддержка-0503_2025-09-22_20-34-12.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/поддержка-0503_2025-09-22_20-34-12.html</a></discord-message>
+<discord-message id="m-1419660354111275048" timestamp="2025-09-22T15:23:24.434000Z" profile="1381962421588988074"><discord-embed embed-title="<img src="<a href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg"" style="color: #00aff4; text-decoration: underline;" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg"</a> alt="📨" class="emoji-img" style="height:24px;width:24px;vertical-align:middle;object-fit:contain;" loading="lazy"/> Новый тикет — Поддержка" slot="embeds" color="#006800" thumbnail="https://media.discordapp.net/attachments/1318958224770076804/1373726963138691324/Discord_4.png?ex=68d23c2e&is=68d0eaae&hm=cb81f2cf147b7a76460dfafa00bf1d9bbbd68edb778675a7db3d04df66e00762&format=webp&quality=lossless&width=1013&height=915&"><discord-embed-fields slot="fields"><discord-embed-field field-title="<strong>Ваш никнейм в Discord:</strong>">captik09</discord-embed-field><discord-embed-field field-title="<strong>Ваш никнейм в Roblox:</strong>">Artyem_BOG</discord-embed-field><discord-embed-field field-title="<strong>В чём проблема:</strong>">отзыв</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="captik09" icon="https://cdn.discordapp.com/avatars/1301612859515473940/edb7dcdcdccaba85bd6be28b0461b2c0.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed>&lt;@1301612859515473940&gt;<discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1419660883243827260" timestamp="2025-09-22T15:25:30.589000Z" profile="1301612859515473940">желаю научить нашу модерацию подробностям каждого наказания чтобы потом не обращаться к менеджменту/владельцу для разъяснения<div class="reactions"><span class="reaction"><img src="https://cdn.discordapp.com/emojis/1402209078171664405.png?size=32" alt="MRP_Checkmark" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span></div></discord-message>
+<discord-message id="m-1419661023304224920" timestamp="2025-09-22T15:26:03.982000Z" profile="1301612859515473940">также добавить в правила термины по типу неофициальное опг-какое то колво человек<div class="reactions"><span class="reaction"><img src="https://cdn.discordapp.com/emojis/1402209078171664405.png?size=32" alt="MRP_Checkmark" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span></div></discord-message>
+<discord-message id="m-1419661201394237462" timestamp="2025-09-22T15:26:46.442000Z" profile="1301612859515473940">ну и еще постараться найти модерацию с разными часовыми поясами или возможностями для круглосуточного модерировния<div class="reactions"><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f601.svg" alt="😁" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44d-1f3fb.svg" alt="👍🏻" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" alt="❌" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span></div></discord-message>
+<discord-message id="m-1419661280507334696" timestamp="2025-09-22T15:27:05.304000Z" profile="1301612859515473940">а то у нас только вечер и конец обеда модерируется по будням<div class="reactions"><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f601.svg" alt="😁" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44d-1f3fb.svg" alt="👍🏻" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" alt="❌" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span></div></discord-message>
+<discord-message id="m-1419661317765075104" timestamp="2025-09-22T15:27:14.187000Z" profile="1301612859515473940">по утрам заходят рандомы и разносят сервер<div class="reactions"><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44d-1f3fb.svg" alt="👍🏻" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" alt="❌" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span></div></discord-message>
+<discord-message id="m-1419661599580618843" timestamp="2025-09-22T15:28:21.377000Z" profile="625255619569647616"><discord-reply slot="reply" author="Artyem_BOG" avatar="https://cdn.discordapp.com/avatars/1301612859515473940/edb7dcdcdccaba85bd6be28b0461b2c0.png?size=1024" role-color="#51c4fc"><span data-goto="1419660883243827260">желаю научить нашу модерацию подробностям каждого наказания чтобы потом не обращаться к менеджменту/</span></discord-reply>Будет.<div class="reactions"><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" alt="✅" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span></div></discord-message>
+<discord-message id="m-1419661626038157423" timestamp="2025-09-22T15:28:27.685000Z" profile="625255619569647616"><discord-reply slot="reply" author="Artyem_BOG" avatar="https://cdn.discordapp.com/avatars/1301612859515473940/edb7dcdcdccaba85bd6be28b0461b2c0.png?size=1024" role-color="#51c4fc"><span data-goto="1419661023304224920">также добавить в правила термины по типу неофициальное опг-какое то колво человек</span></discord-reply>Уже к панкейку с идеей.</discord-message>
+<discord-message id="m-1419661680694263879" timestamp="2025-09-22T15:28:40.716000Z" profile="625255619569647616"><discord-reply slot="reply" author="Artyem_BOG" avatar="https://cdn.discordapp.com/avatars/1301612859515473940/edb7dcdcdccaba85bd6be28b0461b2c0.png?size=1024" role-color="#51c4fc"><span data-goto="1419661201394237462">ну и еще постараться найти модерацию с разными часовыми поясами или возможностями для круглосуточног</span></discord-reply>таких очень мало и очень сложно найти.<div class="reactions"><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" alt="✅" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span></div></discord-message>
+<discord-message id="m-1419661768208421005" timestamp="2025-09-22T15:29:01.581000Z" profile="625255619569647616"><discord-reply slot="reply" author="Artyem_BOG" avatar="https://cdn.discordapp.com/avatars/1301612859515473940/edb7dcdcdccaba85bd6be28b0461b2c0.png?size=1024" role-color="#51c4fc"><span data-goto="1419661317765075104">по утрам заходят рандомы и разносят сервер</span></discord-reply>для этого нужно утром закрывать сервер и открывать ближе ко дню, скажу панкейку.<div class="reactions"><span class="reaction"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" alt="❌" class="emoji-img" style="height:16px;width:16px;vertical-align:middle;" loading="lazy"/><span>1</span></span></div></discord-message>
+<discord-message id="m-1419661783312105585" timestamp="2025-09-22T15:29:05.182000Z" profile="625255619569647616">Спасибо за отзыв.</discord-message>
+<discord-message id="m-1419668979672416306" timestamp="2025-09-22T15:57:40.928000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Artyem_BOG" avatar="https://cdn.discordapp.com/avatars/1301612859515473940/edb7dcdcdccaba85bd6be28b0461b2c0.png?size=1024" role-color="#51c4fc"><span data-goto="1419661023304224920">также добавить в правила термины по типу неофициальное опг-какое то колво человек</span></discord-reply>Не понял</discord-message>
+<discord-message id="m-1419669064304820255" timestamp="2025-09-22T15:58:01.106000Z" profile="1133665013794607114">Ты про это?<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://Moscow-RolePlay.github.io/transcripts/attachments/1419669064304820255_1419669063960891432.png"><img src="https://Moscow-RolePlay.github.io/transcripts/attachments/1419669064304820255_1419669063960891432.png" style="max-width:100%;border-radius:8px;" alt="image.png" loading="lazy" data-lightbox></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1419671410376310904" timestamp="2025-09-22T16:07:20.453000Z" profile="1301612859515473940">типо но про большее колво правил</discord-message>
+<discord-message id="m-1419671459453730867" timestamp="2025-09-22T16:07:32.154000Z" profile="1301612859515473940">сейчас не назову какие</discord-message>
+<discord-message id="m-1419738532141990032" timestamp="2025-09-22T20:34:03.529000Z" profile="1381962421588988074"><img src="<a href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg"" style="color: #00aff4; text-decoration: underline;" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg"</a> alt="🔒" class="emoji-img" style="height:24px;width:24px;vertical-align:middle;object-fit:contain;" loading="lazy"/>Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
