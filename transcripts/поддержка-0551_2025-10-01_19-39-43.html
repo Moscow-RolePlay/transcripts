@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0551</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/7119dd51e6a901b96cffd355529469c0.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/b671161241af45973b8ab89e762346f2.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1326504047179599937": {"author": "xXQuickscoperXxO_O", "avatar": "https://cdn.discordapp.com/avatars/1326504047179599937/3431d7359fae865529ee1d4cab46400d.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/5ae03a3c0b88aee7a550d3740a937614.png?size=1024", "roleName": "Гражданин России", "bot": false, "verified": false}, "563434444321587202": {"author": "Вкусно и Точка", "avatar": "https://cdn.discordapp.com/avatars/563434444321587202/593747eb5141001a944be36d2af13d02.png?size=1024", "roleColor": "#0f583d", "roleIcon": "https://cdn.discordapp.com/role-icons/1398311435901341696/b3abf0aca7be375448eb00d6508c8f6e.png?size=1024", "roleName": "Вкусно и Точка", "bot": true, "verified": true}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/e86ccfc7b7f5f42f36a997ebd447c538.png?size=1024" timestamp="2025-10-01_19-39-43">Тикет Закрыт.<br/>Причина: 131ё23123уув21вап44444444<br/>Дата: 2025-10-01_19-39-43<br/><a href="https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0551_2025-10-01_19-39-43.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0551_2025-10-01_19-39-43.html</a></discord-message>
+<discord-message id="m-1422985685589037160" timestamp="2025-10-01T19:37:05.240000Z" profile="1381962421588988074"><discord-mention type="user">xXQuickscoperXxO_O</discord-mention><discord-embed title=" Новый тикет — Поддержка" slot="embeds" color="#006800" thumbnail="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68de117c&is=68dcbffc&hm=14a42e6ed1ec91f8c0ba34de62c6822e769b7e21c351a12603d5efc7b08cff7f&format=webp&quality=lossless&"><discord-embed-fields slot="fields"><discord-embed-field field-title="Ваш никнейм в Discord:">Проверка</discord-embed-field><discord-embed-field field-title="Ваш никнейм в Roblox:">Проверка</discord-embed-field><discord-embed-field field-title="В чём проблема:">Проверка</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="kir_wow2025" icon="https://cdn.discordapp.com/avatars/1326504047179599937/3431d7359fae865529ee1d4cab46400d.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1422985724981936209" timestamp="2025-10-01T19:37:14.632000Z" profile="1326504047179599937">Що це таке</discord-message>
+<discord-message id="m-1422985728757071872" timestamp="2025-10-01T19:37:15.532000Z" profile="563434444321587202">🎉 <strong><discord-mention type="user">xXQuickscoperXxO_O</discord-mention> just advanced to level 1!</strong><discord-attachments slot="attachments"><discord-attachment type="image" filename="Maki-levelup.png" url="https://Moscow-RolePlay.github.io/transcripts/attachments/1422985728757071872_1422985728492703917.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1422985744829513760" timestamp="2025-10-01T19:37:19.364000Z" profile="1326504047179599937">Ооооо</discord-message>
+<discord-message id="m-1422986350822559866" timestamp="2025-10-01T19:39:43.844000Z" profile="1381962421588988074">🔒Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
