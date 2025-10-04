@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0561</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/a4fce95828b7dfb33ac5ff1ce2d98193.png?size=1024", "roleColor": "#380066", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/cc31842e3a695a5b315c91af9c481efb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1410985330080747621": {"author": "Fegke15", "avatar": "https://cdn.discordapp.com/avatars/1410985330080747621/6552bbd19384875b4c800cba7f279fab.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/5ae03a3c0b88aee7a550d3740a937614.png?size=1024", "roleName": "Гражданин России", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/67afa2b14ebc14614dce70dc29d1e5a4.png?size=1024" timestamp="2025-10-04_19-29-42">Тикет Закрыт.<br/>Причина: Разобрались<br/>Дата: 2025-10-04_19-29-42<br/><a href="https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0561_2025-10-04_19-29-42.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0561_2025-10-04_19-29-42.html</a></discord-message>
+<discord-message id="m-1424004816337764462" timestamp="2025-10-04T15:06:44.945000Z" profile="1381962421588988074"><discord-mention type="user">Fegke15</discord-mention><discord-embed title=" Новый тикет — Поддержка" slot="embeds" color="#380066" thumbnail="https://cdn.discordapp.com/attachments/1363556047704293517/1423308609642696764/Moscow-RolePlay---Halloween--.png?ex=68e279f0&is=68e12870&hm=e589fb0e2b56dd20d56330cb46896fc4f94287197b7024802e6dc4b5764283d3&"><discord-embed-fields slot="fields"><discord-embed-field field-title="Ваш никнейм в Discord:">quietord</discord-embed-field><discord-embed-field field-title="Ваш никнейм в Roblox:">Fegke15</discord-embed-field><discord-embed-field field-title="В чём проблема:">Партнерство</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="quietord" icon="https://cdn.discordapp.com/avatars/1410985330080747621/6552bbd19384875b4c800cba7f279fab.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1424010348641521715" timestamp="2025-10-04T15:28:43.949000Z" profile="1133665013794607114">Здравствуйте, какой проект вы представляете?<br/><discord-mention type="user">Fegke15</discord-mention></discord-message>
+<discord-message id="m-1424029030382047333" timestamp="2025-10-04T16:42:58.023000Z" profile="1410985330080747621"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1424010348641521715">Здравствуйте, какой проект вы представляете?
+
+@1410985330080747621</span></discord-reply>Здравствуйте, я представляю проект с названием " Washington County " на основе ER:CL.<br/>Вот ссылка: <a href="https://discord.gg/HCz4Mfg8" style="color: #00aff4; text-decoration: underline;" target="_blank">https://discord.gg/HCz4Mfg8</a><br/><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1424061155231531132" timestamp="2025-10-04T18:50:37.184000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Fegke15" avatar="" role-color="#2a88cb"><span data-goto="1424029030382047333">Здравствуйте, я представляю проект с названием &quot; Washington County &quot; на основе ER:CL.
+Вот ссылка: ht</span></discord-reply>Примите заявку</discord-message>
+<discord-message id="m-1424066483876790397" timestamp="2025-10-04T19:11:47.632000Z" profile="1410985330080747621"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1424061155231531132">Примите заявку</span></discord-reply>+</discord-message>
+<discord-message id="m-1424068123358789763" timestamp="2025-10-04T19:18:18.515000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Fegke15" avatar="" role-color="#2a88cb"><span data-goto="1424066483876790397">+</span></discord-reply>Вы читали канал #📑┃информация ?</discord-message>
+<discord-message id="m-1424068362627055818" timestamp="2025-10-04T19:19:15.561000Z" profile="1133665013794607114">И я не про участников</discord-message>
+<discord-message id="m-1424068851049435246" timestamp="2025-10-04T19:21:12.010000Z" profile="1410985330080747621">У меня ошибка взаимодействия когда я пытаюсь открыть информацию про партнерство</discord-message>
+<discord-message id="m-1424068868292477089" timestamp="2025-10-04T19:21:16.121000Z" profile="1410985330080747621">а у меня что то не так ?</discord-message>
+<discord-message id="m-1424069295872278699" timestamp="2025-10-04T19:22:58.064000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Fegke15" avatar="" role-color="#2a88cb"><span data-goto="1424068851049435246">У меня ошибка взаимодействия когда я пытаюсь открыть информацию про партнерство</span></discord-reply>Ещё раз</discord-message>
+<discord-message id="m-1424069366575792179" timestamp="2025-10-04T19:23:14.921000Z" profile="1410985330080747621">угу..</discord-message>
+<discord-message id="m-1424069469549887719" timestamp="2025-10-04T19:23:39.472000Z" profile="1410985330080747621">хм</discord-message>
+<discord-message id="m-1424069500910960730" timestamp="2025-10-04T19:23:46.949000Z" profile="1410985330080747621">извините за потраченое время</discord-message>
+<discord-message id="m-1424069569760334029" timestamp="2025-10-04T19:24:03.364000Z" profile="1410985330080747621"><a href="https://tenor.com/view/so-good-wink-smile-oh-yeah-its-true-gif-24163876" style="color: #00aff4; text-decoration: underline;" target="_blank">https://tenor.com/view/so-good-wink-smile-oh-yeah-its-true-gif-24163876</a><discord-embed title="" slot="embeds" color="#006800" thumbnail="https://media.tenor.com/cwoN93BINOMAAAAe/so-good-wink.png"></discord-embed></discord-message>
+<discord-message id="m-1424069642745282733" timestamp="2025-10-04T19:24:20.765000Z" profile="1133665013794607114">Тикет закрываем?</discord-message>
+<discord-message id="m-1424069894948917479" timestamp="2025-10-04T19:25:20.895000Z" profile="1410985330080747621">ну получается что да</discord-message>
+<discord-message id="m-1424069938754097152" timestamp="2025-10-04T19:25:31.339000Z" profile="1410985330080747621">до поры до времени</discord-message>
+<discord-message id="m-1424069942432497764" timestamp="2025-10-04T19:25:32.216000Z" profile="1410985330080747621">)</discord-message>
+<discord-message id="m-1424070977158910084" timestamp="2025-10-04T19:29:38.914000Z" profile="1381962421588988074">🔒Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
