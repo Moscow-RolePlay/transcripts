@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0570</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/a4fce95828b7dfb33ac5ff1ce2d98193.png?size=1024", "roleColor": "#380066", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/cc31842e3a695a5b315c91af9c481efb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "862351239165640724": {"author": "kriperTOP099", "avatar": "https://cdn.discordapp.com/avatars/862351239165640724/fafffd614c44a367feb991e9326f9e96.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/5ae03a3c0b88aee7a550d3740a937614.png?size=1024", "roleName": "Гражданин России", "bot": false, "verified": false}, "585394439715946518": {"author": "[VD-005] savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/cf02d9010c8c1dcc181b30f87578d650.png?size=1024", "roleColor": "#921813", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181646318637198/5b70f56d655e733566af6b41bc6f6c01.png?size=1024", "roleName": "Команда Внутренних Дел Roblox", "bot": false, "verified": false}, "760966468715937814": {"author": "[AD-007] bjmajgda", "avatar": "https://cdn.discordapp.com/avatars/760966468715937814/cd7f4a31412a407e4f1018cc4d10fd34.png?size=1024", "roleColor": "#f3aac8", "roleIcon": "https://cdn.discordapp.com/role-icons/1423638353840181351/ab578c7434a76c26a82bfc2f1a7c942b.png?size=1024", "roleName": "Пинки Пай", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/67afa2b14ebc14614dce70dc29d1e5a4.png?size=1024" timestamp="2025-10-05_20-17-54">Тикет Закрыт.<br/>Причина: Забанены на неделю.<br/>Дата: 2025-10-05_20-17-54<br/><a href="https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0570_2025-10-05_20-17-54.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0570_2025-10-05_20-17-54.html</a></discord-message>
+<discord-message id="m-1424443758270873610" timestamp="2025-10-05T20:10:56.857000Z" profile="1381962421588988074"><discord-mention type="user">kriperTOP099</discord-mention><discord-embed title=" Новый тикет — Поддержка" slot="embeds" color="#380066" thumbnail="https://cdn.discordapp.com/attachments/1363556047704293517/1423308609642696764/Moscow-RolePlay---Halloween--.png?ex=68e3cb70&is=68e279f0&hm=32da8eac4758da1fb371cde5a246ea98cda8ed1e2bc213a99a67405ad9f0df7a&"><discord-embed-fields slot="fields"><discord-embed-field field-title="Ваш никнейм в Discord:">ktoto.099</discord-embed-field><discord-embed-field field-title="Ваш никнейм в Roblox:">kriperTOP099</discord-embed-field><discord-embed-field field-title="В чём проблема:">Меня забанило на данном проекте , я не понимаю за что ,  если же я что то совершил , то  больше не повторится . Я очень ценю данный проект , если же я нечайно совершил что то плохое , сожалею и прошу меня разбанить на первый раз  Если же бан на время , то я буду не против заплатить за свои поступки.</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="ktoto.099" icon="https://cdn.discordapp.com/avatars/862351239165640724/fafffd614c44a367feb991e9326f9e96.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1424443943063388240" timestamp="2025-10-05T20:11:40.915000Z" profile="585394439715946518">Здравствуйте, забанены на неделю за массовые нарушения <discord-mention type="user">kriperTOP099</discord-mention><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44d.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1424444144197046283" timestamp="2025-10-05T20:12:28.869000Z" profile="862351239165640724">Окей , спасибо за информацию</discord-message>
+<discord-message id="m-1424444464449192067" timestamp="2025-10-05T20:13:45.223000Z" profile="760966468715937814">Здравствуйте! Я Саша, Администратор Moscow RolePlay. Закрываем тикет?</discord-message>
+<discord-message id="m-1424444606942023801" timestamp="2025-10-05T20:14:19.196000Z" profile="760966468715937814"><discord-mention type="user">kriperTOP099</discord-mention></discord-message>
+<discord-message id="m-1424445487892922639" timestamp="2025-10-05T20:17:49.231000Z" profile="1381962421588988074">🔒Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
