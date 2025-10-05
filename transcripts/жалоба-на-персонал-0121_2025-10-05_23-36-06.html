@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — жалоба-на-персонал-0121</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/a4fce95828b7dfb33ac5ff1ce2d98193.png?size=1024", "roleColor": "#380066", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/cc31842e3a695a5b315c91af9c481efb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1005561047396130848": {"author": "dima13_and", "avatar": "https://cdn.discordapp.com/avatars/1005561047396130848/bbfbd654355998911e0c7d7f0bb4d959.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/5ae03a3c0b88aee7a550d3740a937614.png?size=1024", "roleName": "Гражданин России", "bot": false, "verified": false}, "625255619569647616": {"author": "[MG-003] siksty", "avatar": "https://cdn.discordapp.com/avatars/625255619569647616/23815cfd622a704b2e6950869bece762.png?size=1024", "roleColor": "#dda0dd", "roleIcon": "https://cdn.discordapp.com/role-icons/1411779306333405376/090ae455e895868b024ab33562e8b18f.png?size=1024", "roleName": "Сын Дипломата", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "1420862486575317052": {"author": "ClueControl M", "avatar": "https://cdn.discordapp.com/avatars/1420862486575317052/d363f844d769990c2af3e90b85fef455.png?size=1024", "roleColor": "#e9434e", "roleIcon": "https://cdn.discordapp.com/role-icons/1420862759884685518/7cf765e674445602cfa8cfce86c114eb.png?size=1024", "roleName": "ClueControl M", "bot": true, "verified": false}, "342692728527650820": {"author": "[MG-004] Kopobo4kiN", "avatar": "https://cdn.discordapp.com/avatars/342692728527650820/bed1aa0633244e69ea16819db5683186.png?size=1024", "roleColor": "#bf0000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181450264412311/15539a6ccbad4266f91cc4fca4f0d812.png?size=1024", "roleName": "Менеджер Сообщества", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/67afa2b14ebc14614dce70dc29d1e5a4.png?size=1024" timestamp="2025-10-05_23-36-06">Тикет Закрыт.<br/>Причина: Варн выдан верно, доказательства:
+https://disk.yandex.ru/i/5tFXFgpK_RXnTA
+
+Если есть ещё какие-то вопросы, откройте тикет ещё раз.<br/>Дата: 2025-10-05_23-36-06<br/><a href="https://Moscow-RolePlay.github.io/transcripts/transcripts/жалоба-на-персонал-0121_2025-10-05_23-36-06.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/transcripts/жалоба-на-персонал-0121_2025-10-05_23-36-06.html</a></discord-message>
+<discord-message id="m-1423963674632130600" timestamp="2025-10-04T12:23:15.998000Z" profile="1381962421588988074"><discord-mention type="user">dima13_and</discord-mention><discord-embed title=" Новый тикет — Жалоба На Персонал" slot="embeds" color="#380066" thumbnail="https://cdn.discordapp.com/attachments/1363556047704293517/1423308609642696764/Moscow-RolePlay---Halloween--.png?ex=68e3cb70&is=68e279f0&hm=32da8eac4758da1fb371cde5a246ea98cda8ed1e2bc213a99a67405ad9f0df7a&"><discord-embed-fields slot="fields"><discord-embed-field field-title="Ваш Discord и Roblox:">karbonella | dima13_and</discord-embed-field><discord-embed-field field-title="Сотрудник:">Borisikbenterug</discord-embed-field><discord-embed-field field-title="Причина:">Выдал наказание за уход от наказания... которое в принципе не относилось вообще никак ко мне...<br/>Хочу подать аппеляцию на стятие варна</discord-embed-field><discord-embed-field field-title="Когда:">04.10.2025 / 13:10 вроде...</discord-embed-field><discord-embed-field field-title="Доказательства:">укажу свой лс тг в тикете</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="karbonella" icon="https://cdn.discordapp.com/avatars/1005561047396130848/bbfbd654355998911e0c7d7f0bb4d959.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1423965417784868968" timestamp="2025-10-04T12:30:11.598000Z" profile="1005561047396130848"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://Moscow-RolePlay.github.io/transcripts/attachments/1423965417784868968_1423965417633746996.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1423965536081018951" timestamp="2025-10-04T12:30:39.802000Z" profile="1005561047396130848">Извините меня какая должна была быть форма если у меня была пожарная лестница...</discord-message>
+<discord-message id="m-1423965790104850433" timestamp="2025-10-04T12:31:40.366000Z" profile="1005561047396130848">я был не согласен с этим наказанием и уехал...</discord-message>
+<discord-message id="m-1423969572230402098" timestamp="2025-10-04T12:46:42.095000Z" profile="625255619569647616">Здравствуйте. Менеджер персонала h1kken. Начинаю разбор вашей жалобы.</discord-message>
+<discord-message id="m-1423969764568727702" timestamp="2025-10-04T12:47:27.952000Z" profile="625255619569647616">Сразу скажу, что пока вам выдается наказание, вы не имеете право уезжать от мода до конца мод сцены, иначе это расценивается как уход от наказания. Вы должны дождаться пока модератор выдаст вам наказание и отпустит, и только тогда вы можете уезжать.</discord-message>
+<discord-message id="m-1423969795652718653" timestamp="2025-10-04T12:47:35.363000Z" profile="625255619569647616">Док-вы всей ситуации у вас есть?</discord-message>
+<discord-message id="m-1423969805211533322" timestamp="2025-10-04T12:47:37.642000Z" profile="625255619569647616"><discord-mention type="user">dima13_and</discord-mention></discord-message>
+<discord-message id="m-1423970924742316072" timestamp="2025-10-04T12:52:04.559000Z" profile="1005561047396130848"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1423969764568727702">Сразу скажу, что пока вам выдается наказание, вы не имеете право уезжать от мода до конца мод сцены,</span></discord-reply>крч было так</discord-message>
+<discord-message id="m-1423971749208391793" timestamp="2025-10-04T12:55:21.127000Z" profile="1005561047396130848">я приехал на вызов на пожарной лестнице в форме мчс я не знаю чё вы придрались к этому но другой формы у вас нету, в данном случае если бы я одел другую не вашу форму то вы бы тоже придрались. Так вот поехал на вызов тушил деревья с рукава из инвертаря (не от машины) после того как потушил приехал гражданский а точнее которому было 13 лет это я узнал потом ну он решил повыпендриваться и вызвал мода а именно тот который выдал мне наказание. ему он сказал что якобы у меня не правильная форма, я с этим не согласился и уехал модер просто смотрел и ничего даже не делал. после того как я уехал мне резко выдаёт розыск и лодает на спавн гражданского после тепает к себе и после выдает наказание..</discord-message>
+<discord-message id="m-1423971784616575066" timestamp="2025-10-04T12:55:29.569000Z" profile="1005561047396130848">видос могу скинуть в лс</discord-message>
+<discord-message id="m-1423971791080001588" timestamp="2025-10-04T12:55:31.110000Z" profile="1005561047396130848">в тг</discord-message>
+<discord-message id="m-1423971945162215496" timestamp="2025-10-04T12:56:07.846000Z" profile="1005561047396130848">@ karbonella73</discord-message>
+<discord-message id="m-1423971956738363524" timestamp="2025-10-04T12:56:10.606000Z" profile="1005561047396130848">вот</discord-message>
+<discord-message id="m-1423972387065565224" timestamp="2025-10-04T12:57:53.204000Z" profile="625255619569647616">@h1kkenk</discord-message>
+<discord-message id="m-1423972399749271553" timestamp="2025-10-04T12:57:56.228000Z" profile="625255619569647616">отправьте мне в лс</discord-message>
+<discord-message id="m-1423985985267568703" timestamp="2025-10-04T13:51:55.268000Z" profile="1133665013794607114"><discord-reply slot="reply" author="dima13_and" avatar="" role-color="#2a88cb"><span data-goto="1423971749208391793">я приехал на вызов на пожарной лестнице в форме мчс я не знаю чё вы придрались к этому но другой фор</span></discord-reply>Если форма именно МЧС России для тушения пожаров ее нельзя использовать</discord-message>
+<discord-message id="m-1423986039512633364" timestamp="2025-10-04T13:52:08.201000Z" profile="625255619569647616"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1423985985267568703">Если форма именно МЧС России для тушения пожаров ее нельзя использовать</span></discord-reply>Как водитель можно.</discord-message>
+<discord-message id="m-1423986043304284261" timestamp="2025-10-04T13:52:09.105000Z" profile="1133665013794607114">Нужно под названием Firefighter A или B</discord-message>
+<discord-message id="m-1423986072815276094" timestamp="2025-10-04T13:52:16.141000Z" profile="625255619569647616">А так да.</discord-message>
+<discord-message id="m-1423986139596980284" timestamp="2025-10-04T13:52:32.063000Z" profile="625255619569647616">Но игрок соло был, возможно просто можно бы было отыграть боевку.</discord-message>
+<discord-message id="m-1423986152330887258" timestamp="2025-10-04T13:52:35.099000Z" profile="1133665013794607114"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1423986072815276094">А так да.</span></discord-reply>Он же написал «когда Я потушил пожар»</discord-message>
+<discord-message id="m-1423986318953939025" timestamp="2025-10-04T13:53:14.825000Z" profile="1133665013794607114">Ждем доктв</discord-message>
+<discord-message id="m-1423986462273048616" timestamp="2025-10-04T13:53:48.995000Z" profile="625255619569647616">мне скинули в лс.</discord-message>
+<discord-message id="m-1423986581190082631" timestamp="2025-10-04T13:54:17.347000Z" profile="625255619569647616">но там буквально начало ролика это когда человек уже в наручниках мода</discord-message>
+<discord-message id="m-1423986621463658587" timestamp="2025-10-04T13:54:26.949000Z" profile="1133665013794607114"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1423986462273048616">мне скинули в лс.</span></discord-reply>Делай всегда через @erlcrussiabot чтобы все видели</discord-message>
+<discord-message id="m-1423986644213694569" timestamp="2025-10-04T13:54:32.373000Z" profile="1133665013794607114">Там в группу приходит</discord-message>
+<discord-message id="m-1423986657832472680" timestamp="2025-10-04T13:54:35.620000Z" profile="1133665013794607114">Доки сюда кинь</discord-message>
+<discord-message id="m-1423987748905291817" timestamp="2025-10-04T13:58:55.752000Z" profile="625255619569647616">слишком большой</discord-message>
+<discord-message id="m-1423987767070949486" timestamp="2025-10-04T13:59:00.083000Z" profile="625255619569647616">3.40 ролик</discord-message>
+<discord-message id="m-1423988912421867592" timestamp="2025-10-04T14:03:33.156000Z" profile="1005561047396130848"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1423985985267568703">Если форма именно МЧС России для тушения пожаров ее нельзя использовать</span></discord-reply>а какую...</discord-message>
+<discord-message id="m-1423989061420318840" timestamp="2025-10-04T14:04:08.680000Z" profile="625255619569647616">В скором времени запрошу запись нарушения у модера.</discord-message>
+<discord-message id="m-1423989067833675888" timestamp="2025-10-04T14:04:10.209000Z" profile="1005561047396130848">а увидел</discord-message>
+<discord-message id="m-1423989117607481404" timestamp="2025-10-04T14:04:22.076000Z" profile="1005561047396130848">ну так я один раз с ней играл не сегодня мне за неё втык дали</discord-message>
+<discord-message id="m-1423989132299993249" timestamp="2025-10-04T14:04:25.579000Z" profile="1005561047396130848">сказали нельзя..</discord-message>
+<discord-message id="m-1423989873299427411" timestamp="2025-10-04T14:07:22.247000Z" profile="1133665013794607114">Скажите что можно, т.к. она  для тушения пожаров, в следующий раз запишите</discord-message>
+<discord-message id="m-1423989947357986868" timestamp="2025-10-04T14:07:39.904000Z" profile="1005561047396130848"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1423989873299427411">Скажите что можно, т.к. она  для тушения пожаров, в следующий раз запишите</span></discord-reply>а в правилах прописать не?</discord-message>
+<discord-message id="m-1423989970930237481" timestamp="2025-10-04T14:07:45.524000Z" profile="1005561047396130848">или уже есть там?</discord-message>
+<discord-message id="m-1423990178749612103" timestamp="2025-10-04T14:08:35.072000Z" profile="1005561047396130848">я не замечал просто</discord-message>
+<discord-message id="m-1424031644268101834" timestamp="2025-10-04T16:53:21.222000Z" profile="1420862486575317052"><discord-embed title="dima13_and" slot="embeds" color="#2b2d31" thumbnail="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-14886E436059E2C627F822471152D488-Png/48/48/AvatarHeadshot/Png/noFilter"><discord-embed-fields slot="fields"><discord-embed-field field-title="Warning"><blockquote> <strong>Moderator:</strong> <discord-mention type="user">User#1195675629010558986</discord-mention></blockquote><br/><blockquote> <strong>Reason:</strong> A-9 Уехал перед выдачей наказания</blockquote><br/><blockquote> <strong>At:</strong> <t:1759568881></blockquote><br/><blockquote> <strong>ID:</strong> <code>7380166796295012352</code></blockquote></discord-embed-field><discord-embed-field field-title="Warning"><blockquote> <strong>Moderator:</strong> <discord-mention type="user">User#1195675629010558986</discord-mention></blockquote><br/><blockquote> <strong>Reason:</strong> B-7 Водил пожарное авто (ПЦЛ) в форме МЧС (АСС)</blockquote><br/><blockquote> <strong>At:</strong> <t:1759570004></blockquote><br/><blockquote> <strong>ID:</strong> <code>7380171507282739200</code></blockquote></discord-embed-field><discord-embed-field field-title="Warning"><blockquote> <strong>Moderator:</strong> <discord-mention type="user">User#1195675629010558986</discord-mention></blockquote><br/><blockquote> <strong>Reason:</strong> A-11 Пытался спровоцировать на конфликт говоря "пошел вон не мешай"</blockquote><br/><blockquote> <strong>At:</strong> <t:1759570696></blockquote><br/><blockquote> <strong>ID:</strong> <code>7380174411611766784</code></blockquote></discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="h1kken_zzz" icon="https://cdn.discordapp.com/avatars/625255619569647616/23815cfd622a704b2e6950869bece762.png?size=1024"></discord-embed-author></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary"><discord-custom-emoji name="l_arrow" url="https://cdn.discordapp.com/emojis/1421123603495391232.png?size=48"></discord-custom-emoji>Кнопка</discord-button><discord-button type="secondary">3</discord-button><discord-button type="secondary"><discord-custom-emoji name="arrow" url="https://cdn.discordapp.com/emojis/1421123601028874250.png?size=48"></discord-custom-emoji>Кнопка</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1424032220125073418" timestamp="2025-10-04T16:55:38.517000Z" profile="625255619569647616">И так. Модератор скинул видео док-вы, как вы и вправду начали уезжать с мод сцены без обоснованной причины. Это является уходом от наказания. Далее по первому варну он выдал все вам верно. По второму варну про форму МЧС на машине АЦЛ пока сказать не могу, уточню у владельца \ со владельца сервера.</discord-message>
+<discord-message id="m-1424034312495562813" timestamp="2025-10-04T17:03:57.377000Z" profile="625255619569647616"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1424032220125073418">И так. Модератор скинул видео док-вы, как вы и вправду начали уезжать с мод сцены без обоснованной п</span></discord-reply><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1424034596600680468" timestamp="2025-10-04T17:05:05.113000Z" profile="1133665013794607114"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1424034312495562813">@1133665013794607114</span></discord-reply>Где запись то</discord-message>
+<discord-message id="m-1424035119215280270" timestamp="2025-10-04T17:07:09.714000Z" profile="625255619569647616"><a href="https://disk.yandex.ru/i/5tFXFgpK_RXnTA" style="color: #00aff4; text-decoration: underline;" target="_blank">https://disk.yandex.ru/i/5tFXFgpK_RXnTA</a><discord-embed title="Яндекс" slot="embeds" color="#006800" thumbnail="https://yastatic.net/s3/home-static/_/37/37a02b5dc7a51abac55d8a5b6c865f0e.png"><discord-embed-description slot="description">Найдётся всё</discord-embed-description></discord-embed></discord-message>
+<discord-message id="m-1424438174054219936" timestamp="2025-10-05T19:48:45.476000Z" profile="342692728527650820"><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1424438822862717019" timestamp="2025-10-05T19:51:20.164000Z" profile="1133665013794607114"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1424032220125073418">И так. Модератор скинул видео док-вы, как вы и вправду начали уезжать с мод сцены без обоснованной п</span></discord-reply>Вплане по машине? Если он тушил без шланга, да, науршение, если нет, то нету нарушения по машине</discord-message>
+<discord-message id="m-1424438848854687906" timestamp="2025-10-05T19:51:26.361000Z" profile="1133665013794607114">Всё, про форму верно</discord-message>
+<discord-message id="m-1424440829711487149" timestamp="2025-10-05T19:59:18.634000Z" profile="625255619569647616"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1424438822862717019">Вплане по машине? Если он тушил без шланга, да, науршение, если нет, то нету нарушения по машине</span></discord-reply><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://Moscow-RolePlay.github.io/transcripts/attachments/1424440829711487149_1424440829535322304.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1424440910468350184" timestamp="2025-10-05T19:59:37.888000Z" profile="625255619569647616"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1424438848854687906">Всё, про форму верно</span></discord-reply>ну значит все</discord-message>
+<discord-message id="m-1424440968534294588" timestamp="2025-10-05T19:59:51.732000Z" profile="1133665013794607114">Ну типо не соответсует, но так оставь</discord-message>
+<discord-message id="m-1424440986498760828" timestamp="2025-10-05T19:59:56.015000Z" profile="1133665013794607114">В любом случае 1 варн</discord-message>
+<discord-message id="m-1424494166989344898" timestamp="2025-10-05T23:31:15.232000Z" profile="1133665013794607114"><discord-mention type="user">dima13_and</discord-mention><discord-mention type="user">[MG-003] siksty</discord-mention> закрываем тикет?</discord-message>
+<discord-message id="m-1424495007829594222" timestamp="2025-10-05T23:34:35.704000Z" profile="625255619569647616"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1424494166989344898">@1005561047396130848@625255619569647616 закрываем тикет?</span></discord-reply>Ну я даю отказ в тикете, так как оба варна были верно выданы.</discord-message>
+<discord-message id="m-1424495370439888949" timestamp="2025-10-05T23:36:02.157000Z" profile="1381962421588988074">🔒Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
