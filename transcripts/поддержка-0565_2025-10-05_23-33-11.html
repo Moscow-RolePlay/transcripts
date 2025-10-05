@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0565</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/a4fce95828b7dfb33ac5ff1ce2d98193.png?size=1024", "roleColor": "#380066", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/cc31842e3a695a5b315c91af9c481efb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1114984942934437928": {"author": "[MD-009] NikitaKot08", "avatar": "https://cdn.discordapp.com/avatars/1114984942934437928/63c5c58407938ac6d8d553fd4538c409.png?size=1024", "roleColor": "#0ba348", "roleIcon": "https://cdn.discordapp.com/role-icons/1416202584120623225/bd07e078ba8d33b7fe5b50fd4f167a6e.png?size=1024", "roleName": "Модератор Discord", "bot": false, "verified": false}, "563434444321587202": {"author": "Вкусно и Точка", "avatar": "https://cdn.discordapp.com/avatars/563434444321587202/593747eb5141001a944be36d2af13d02.png?size=1024", "roleColor": "#0f583d", "roleIcon": "https://cdn.discordapp.com/role-icons/1398311435901341696/b3abf0aca7be375448eb00d6508c8f6e.png?size=1024", "roleName": "Вкусно и Точка", "bot": true, "verified": true}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "1301612859515473940": {"author": "Artyem_BOG", "avatar": "https://cdn.discordapp.com/avatars/1301612859515473940/d26aaea9dbe27e62380666880b833e60.png?size=1024", "roleColor": "#2ca737", "roleIcon": "https://cdn.discordapp.com/role-icons/1416743458877739038/f533d2418b2013bfb572fd7db226a0dc.png?size=1024", "roleName": "Младший Модератор Discord", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/67afa2b14ebc14614dce70dc29d1e5a4.png?size=1024" timestamp="2025-10-05_23-33-11">Тикет Закрыт.<br/>Причина: **Предложите идею на сервере ФСБ, вот ответ лидера:**
+Для этого есть тикеты предложений на сервере ФСБ, но могу тут сказать что это лишняя роль из за того что сотрудники су и так знают свои звания, а другие просто этому не будут придавать значения.<br/>Дата: 2025-10-05_23-33-11<br/><a href="https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0565_2025-10-05_23-33-11.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0565_2025-10-05_23-33-11.html</a></discord-message>
+<discord-message id="m-1424359985894396015" timestamp="2025-10-05T14:38:03.966000Z" profile="1381962421588988074"><discord-mention type="user">[MD-009] NikitaKot08</discord-mention><discord-embed title=" Новый тикет — Поддержка" slot="embeds" color="#380066" thumbnail="https://cdn.discordapp.com/attachments/1363556047704293517/1423308609642696764/Moscow-RolePlay---Halloween--.png?ex=68e3cb70&is=68e279f0&hm=32da8eac4758da1fb371cde5a246ea98cda8ed1e2bc213a99a67405ad9f0df7a&"><discord-embed-fields slot="fields"><discord-embed-field field-title="Ваш никнейм в Discord:">NikiaKot08</discord-embed-field><discord-embed-field field-title="Ваш никнейм в Roblox:">.a.r.f.e.m.</discord-embed-field><discord-embed-field field-title="В чём проблема:">Предлагаю добавить на сервере ФСБ роли, "юстиции" и тп. Т.к. там есть СУ и другие подразделения то я думаю єто надо. Потому что некоторые не понимают кто они. Например что сейчас: СУ ФСБ России, лейтенант<br/>Например что будет потом: СУ ФСБ России, лейтенант юстиции</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name=".a.r.f.e.m." icon="https://cdn.discordapp.com/avatars/1114984942934437928/63c5c58407938ac6d8d553fd4538c409.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1424360056375218176" timestamp="2025-10-05T14:38:20.770000Z" profile="1114984942934437928">Просто добавить роль-приставку к званиям</discord-message>
+<discord-message id="m-1424360061089874032" timestamp="2025-10-05T14:38:21.894000Z" profile="563434444321587202">🎉 <strong><discord-mention type="user">[MD-009] NikitaKot08</discord-mention> just advanced to level 7!</strong><discord-attachments slot="attachments"><discord-attachment type="image" filename="Maki-levelup.png" url="https://Moscow-RolePlay.github.io/transcripts/attachments/1424360061089874032_1424360060930363433.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1424360173925040189" timestamp="2025-10-05T14:38:48.796000Z" profile="1114984942934437928"><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1424414995768147969" timestamp="2025-10-05T18:16:39.342000Z" profile="1301612859515473940"><discord-reply slot="reply" author="[MD-009] NikitaKot08" avatar="" role-color="#0ba348"><span data-goto="1424360056375218176">Просто добавить роль-приставку к званиям</span></discord-reply>Добрый день.</discord-message>
+<discord-message id="m-1424415439848607917" timestamp="2025-10-05T18:18:25.219000Z" profile="1301612859515473940">Для этого есть тикеты предложений на сервере ФСБ, но могу тут сказать что это лишняя роль из за того что сотрудники су и так знают свои звания, а другие просто этому не будут придавать значения.</discord-message>
+<discord-message id="m-1424494635010756720" timestamp="2025-10-05T23:33:06.817000Z" profile="1381962421588988074">🔒Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
