@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — подписка-кремль-0037</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/a4fce95828b7dfb33ac5ff1ce2d98193.png?size=1024", "roleColor": "#380066", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/cc31842e3a695a5b315c91af9c481efb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "342692728527650820": {"author": "[MG-004] Kopobo4kiN", "avatar": "https://cdn.discordapp.com/avatars/342692728527650820/bed1aa0633244e69ea16819db5683186.png?size=1024", "roleColor": "#bf0000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181450264412311/15539a6ccbad4266f91cc4fca4f0d812.png?size=1024", "roleName": "Менеджер Сообщества", "bot": false, "verified": false}, "1363531806586048755": {"author": "Moscow RolePlay Roblox", "avatar": "https://cdn.discordapp.com/avatars/1363531806586048755/35ea443c68b7400cd036322e591042ef.png?size=1024", "roleColor": "#cc2641", "roleIcon": "https://cdn.discordapp.com/role-icons/1363544547870900358/3b6e22a9df7fe7b380b3bbeb6a5afdd1.png?size=1024", "roleName": "Moscow RolePlay Roblox", "bot": true, "verified": false}, "525995783514750977": {"author": "K1VETKA", "avatar": "https://cdn.discordapp.com/avatars/525995783514750977/a_6e220d6a3ebd97f4172f7f0b1c4d7d96.gif?size=1024", "roleColor": "#ff5dd6", "roleIcon": "https://cdn.discordapp.com/role-icons/1426645525809332285/ae118ada1e81b4de1fd0aac2d5cae81e.png?size=1024", "roleName": "Каптер", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/67afa2b14ebc14614dce70dc29d1e5a4.png?size=1024" timestamp="2025-10-11_23-43-28">Тикет Закрыт.<br/>Причина: Разобрали<br/>Дата: 2025-10-11_23-43-28<br/><a href="https://Moscow-RolePlay.github.io/transcripts/transcripts/подписка-кремль-0037_2025-10-11_23-43-28.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/transcripts/подписка-кремль-0037_2025-10-11_23-43-28.html</a></discord-message>
+<discord-message id="m-1426554216859701319" timestamp="2025-10-11T15:57:09.395000Z" profile="1381962421588988074"><discord-mention type="user">[MG-004] Kopobo4kiN</discord-mention><discord-embed title=" Новый тикет — Подписка Кремль" slot="embeds" color="#380066" thumbnail="https://cdn.discordapp.com/attachments/1363556047704293517/1423308609642696764/Moscow-RolePlay---Halloween--.png?ex=68ebb470&is=68ea62f0&hm=ba78e2e10615523b467cabc3b6be373eeaae95838eb35632849f1f94d8b2dcae&"><discord-embed-fields slot="fields"><discord-embed-field field-title=" Оформляется подписка">Кремль</discord-embed-field><discord-embed-field field-title="Roblox Никнейм:">.</discord-embed-field><discord-embed-field field-title="Discord Никнейм:">.</discord-embed-field><discord-embed-field field-title="Длительность на сервере:">.</discord-embed-field><discord-embed-field field-title="Доказательство оплаты:">.</discord-embed-field><discord-embed-field field-title="Тип подписки:">кремль</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="tnchum" icon="https://cdn.discordapp.com/avatars/342692728527650820/bed1aa0633244e69ea16819db5683186.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1426560810100064307" timestamp="2025-10-11T16:23:21.346000Z" profile="1363531806586048755"><discord-embed title=" Подписчик обновлён!" slot="embeds" color="#cc2641"><discord-embed-description slot="description">Данные подписчика успешно обновлены, роли обновлены.</discord-embed-description><discord-embed-fields slot="fields"><discord-embed-field field-title=" Discord" inline><discord-mention type="user">K1VETKA</discord-mention></discord-embed-field><discord-embed-field field-title=" Roblox" inline><a href="<a href="https://www.roblox.com/users/3786289702/profile"" style="color: #00aff4; text-decoration: underline;" target="_blank">https://www.roblox.com/users/3786289702/profile"</a> style="color: #00aff4; text-decoration: underline;" target="_blank">K1VETKA</a></discord-embed-field><discord-embed-field field-title="⏳ Дни подписки" inline>30</discord-embed-field><discord-embed-field field-title=" Статус" inline>Кремль</discord-embed-field><discord-embed-field field-title="Истекает" inline><t:1762780984:F></discord-embed-field></discord-embed-fields><discord-embed-footer slot="footer">Moscow RolePlay | ER:LC Subscriber System</discord-embed-footer></discord-embed></discord-message>
+<discord-message id="m-1426561142154727435" timestamp="2025-10-11T16:24:40.514000Z" profile="342692728527650820"><discord-mention type="user">K1VETKA</discord-mention>  Здравствуйте! Ознакомиться с забаненными автомобиля (Разрешенными для вас) ⁠📑┃#информация ->Забаненные машины, также вы можете оформить прямо СЕЙЧАС эксклюзивную рольку!<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1426563735027191899" timestamp="2025-10-11T16:34:58.703000Z" profile="342692728527650820"><discord-reply slot="reply" author="[MG-004] Kopobo4kiN" avatar="" role-color="#bf0000"><span data-goto="1426561142154727435">@525995783514750977  Здравствуйте! Ознакомиться с забаненными автомобиля (Разрешенными для вас) ⁠</span></discord-reply><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;">Ролька будет отображаться только в дискорде!</span></discord-message>
+<discord-message id="m-1426578059061887148" timestamp="2025-10-11T17:31:53.819000Z" profile="525995783514750977">что нужно сюда написать для роли ?</discord-message>
+<discord-message id="m-1426586242216104016" timestamp="2025-10-11T18:04:24.835000Z" profile="342692728527650820"><discord-reply slot="reply" author="K1VETKA" avatar="" role-color="#ff5dd6"><span data-goto="1426578059061887148">что нужно сюда написать для роли ?</span></discord-reply>Название роли и картинку</discord-message>
+<discord-message id="m-1426588514002276375" timestamp="2025-10-11T18:13:26.471000Z" profile="525995783514750977">каптер<discord-attachments slot="attachments"><discord-attachment type="image" filename="132213123.jpg" url="https://Moscow-RolePlay.github.io/transcripts/attachments/1426588514002276375_1426588513893089301.jpg"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1426639606467526797" timestamp="2025-10-11T21:36:27.864000Z" profile="342692728527650820"><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1426640971348578324" timestamp="2025-10-11T21:41:53.277000Z" profile="1133665013794607114"><discord-reply slot="reply" author="K1VETKA" avatar="" role-color="#ff5dd6"><span data-goto="1426588514002276375">каптер</span></discord-reply>А цвет?</discord-message>
+<discord-message id="m-1426641202517639301" timestamp="2025-10-11T21:42:48.392000Z" profile="525995783514750977">розовый )</discord-message>
+<discord-message id="m-1426645770014032033" timestamp="2025-10-11T22:00:57.368000Z" profile="1133665013794607114"><discord-mention type="user">K1VETKA</discord-mention> так?</discord-message>
+<discord-message id="m-1426655888818700339" timestamp="2025-10-11T22:41:09.879000Z" profile="525995783514750977">да, спасиииииииибо</discord-message>
+<discord-message id="m-1426665240589766677" timestamp="2025-10-11T23:18:19.515000Z" profile="1133665013794607114"><discord-reply slot="reply" author="K1VETKA" avatar="" role-color="#ff5dd6"><span data-goto="1426655888818700339">да, спасиииииииибо</span></discord-reply>Закрываем тикет или ещё что-то?</discord-message>
+<discord-message id="m-1426670209523253430" timestamp="2025-10-11T23:38:04.201000Z" profile="525995783514750977">нет, закрывайте</discord-message>
+<discord-message id="m-1426671524206870578" timestamp="2025-10-11T23:43:17.646000Z" profile="1381962421588988074">🔒Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
