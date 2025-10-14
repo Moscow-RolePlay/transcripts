@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0597</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/a4fce95828b7dfb33ac5ff1ce2d98193.png?size=1024", "roleColor": "#380066", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/cc31842e3a695a5b315c91af9c481efb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "917728021128032276": {"author": "Dragon_Macalester", "avatar": "https://cdn.discordapp.com/avatars/917728021128032276/42f8a7ef9b532a466ec14a21d2dc38d6.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/5ae03a3c0b88aee7a550d3740a937614.png?size=1024", "roleName": "Гражданин России", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "994164698654187580": {"author": "gagegaming99", "avatar": "https://cdn.discordapp.com/avatars/994164698654187580/87688a809b8afa990c25a5b7247bf6f9.png?size=1024", "roleColor": "#0ba348", "roleIcon": "https://cdn.discordapp.com/role-icons/1416202584120623225/bd07e078ba8d33b7fe5b50fd4f167a6e.png?size=1024", "roleName": "Модератор Discord", "bot": false, "verified": false}, "625255619569647616": {"author": "[MG-003] siksty", "avatar": "https://cdn.discordapp.com/avatars/625255619569647616/23815cfd622a704b2e6950869bece762.png?size=1024", "roleColor": "#dda0dd", "roleIcon": "https://cdn.discordapp.com/role-icons/1411779306333405376/090ae455e895868b024ab33562e8b18f.png?size=1024", "roleName": "Сын Дипломата", "bot": false, "verified": false}, "1353009377048662127": {"author": "[MM-014] Killer103042", "avatar": "https://cdn.discordapp.com/avatars/1353009377048662127/4a43becb2832f1905e7a2dc5bdaa6fc1.png?size=1024", "roleColor": "#ffb200", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181915769114695/68ca90b259e69fc6c357a687739d0505.png?size=1024", "roleName": "Младший Модератор MRP", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/67afa2b14ebc14614dce70dc29d1e5a4.png?size=1024" timestamp="2025-10-14_16-19-16">Тикет Закрыт.<br/>Причина: Вопрос решен<br/>Дата: 2025-10-14_16-19-16<br/><a href="https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0597_2025-10-14_16-19-16.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0597_2025-10-14_16-19-16.html</a></discord-message>
+<discord-message id="m-1427616034713501706" timestamp="2025-10-14T14:16:26.499000Z" profile="1381962421588988074"><discord-mention type="user">Dragon_Macalester</discord-mention><discord-embed title=" Новый тикет — Поддержка" slot="embeds" color="#380066" thumbnail="https://cdn.discordapp.com/attachments/1363556047704293517/1423308609642696764/Moscow-RolePlay---Halloween--.png?ex=68ef0030&is=68edaeb0&hm=bcc3c4fee1a381f04e70e06ac21828097c1fa67ed4f3ea2def3320ebe07d93d2&"><discord-embed-fields slot="fields"><discord-embed-field field-title="Ваш никнейм в Discord:">Dragon_Macalester</discord-embed-field><discord-embed-field field-title="Ваш никнейм в Roblox:">Dragon_Macalester</discord-embed-field><discord-embed-field field-title="В чём проблема:">можно ли обучиться в ФСБ, на следственное управление. Но работать в следственном комитете (в МВД) ?</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="dragon_macalester" icon="https://cdn.discordapp.com/avatars/917728021128032276/42f8a7ef9b532a466ec14a21d2dc38d6.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1427618139478294650" timestamp="2025-10-14T14:24:48.314000Z" profile="1133665013794607114">Это как</discord-message>
+<discord-message id="m-1427618201512185877" timestamp="2025-10-14T14:25:03.104000Z" profile="1133665013794607114">И откуда у мвд следственный комитет...</discord-message>
+<discord-message id="m-1427618691473870962" timestamp="2025-10-14T14:26:59.920000Z" profile="994164698654187580">Здравствуйте 👋! Я <discord-mention type="user">gagegaming99</discord-mention> модератор Discord Moscow RolePlay. Спасибо, что обратились в тикет. В данный момент ваш тикет рассматриваю я. Если возникнет необходимость, я передам тикет сотруднику с более высоким рангом или сообщу о временном уходе.</discord-message>
+<discord-message id="m-1427618707647103129" timestamp="2025-10-14T14:27:03.776000Z" profile="994164698654187580">Так у МВД только ППС, ДПС, угро и спецназ</discord-message>
+<discord-message id="m-1427618971540127817" timestamp="2025-10-14T14:28:06.693000Z" profile="994164698654187580">Если судить логически то наверное можно, но подразделения такого в МВД нету.</discord-message>
+<discord-message id="m-1427619035276640256" timestamp="2025-10-14T14:28:21.889000Z" profile="994164698654187580">Так что тут вопрос нужен в канале Discord МВД</discord-message>
+<discord-message id="m-1427619131452031060" timestamp="2025-10-14T14:28:44.819000Z" profile="994164698654187580"><discord-mention type="user">Dragon_Macalester</discord-mention></discord-message>
+<discord-message id="m-1427619219192676445" timestamp="2025-10-14T14:29:05.738000Z" profile="917728021128032276">нет имею ввиду самой фракции в игре</discord-message>
+<discord-message id="m-1427619244102914130" timestamp="2025-10-14T14:29:11.677000Z" profile="917728021128032276">как роль</discord-message>
+<discord-message id="m-1427619281377562707" timestamp="2025-10-14T14:29:20.564000Z" profile="917728021128032276">СК создан для ивентов</discord-message>
+<discord-message id="m-1427619335349866567" timestamp="2025-10-14T14:29:33.432000Z" profile="917728021128032276">а я хочу обучиться и работать следователем</discord-message>
+<discord-message id="m-1427619423069667439" timestamp="2025-10-14T14:29:54.346000Z" profile="917728021128032276">в команде МВД, но в роли СК</discord-message>
+<discord-message id="m-1427619510890004562" timestamp="2025-10-14T14:30:15.284000Z" profile="917728021128032276">требуется могу купить и подобрать скин именно для следователя</discord-message>
+<discord-message id="m-1427619685188501595" timestamp="2025-10-14T14:30:56.840000Z" profile="917728021128032276"><discord-reply slot="reply" author="gagegaming99" avatar="" role-color="#0ba348"><span data-goto="1427618691473870962">Здравствуйте ! Я @994164698654187580 модератор Discord Moscow RolePlay. Спасибо, что обратились в</span></discord-reply>просьба передать данный тикет, Менеджерам проекта</discord-message>
+<discord-message id="m-1427621645337628705" timestamp="2025-10-14T14:38:44.176000Z" profile="625255619569647616"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#380066"><span data-goto="1427616034713501706">@917728021128032276</span></discord-reply>СК у нас нету вроде как.</discord-message>
+<discord-message id="m-1427621700950032564" timestamp="2025-10-14T14:38:57.435000Z" profile="625255619569647616">Если и есть, то нужно в МВД на эту должность идти</discord-message>
+<discord-message id="m-1427621717332988025" timestamp="2025-10-14T14:39:01.341000Z" profile="625255619569647616">СК и СУ разные вещи</discord-message>
+<discord-message id="m-1427621739529244703" timestamp="2025-10-14T14:39:06.633000Z" profile="625255619569647616">с разными полномочиями</discord-message>
+<discord-message id="m-1427622203108757505" timestamp="2025-10-14T14:40:57.159000Z" profile="917728021128032276"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1427621700950032564">Если и есть, то нужно в МВД на эту должность идти</span></discord-reply>вот я и спрашиваю</discord-message>
+<discord-message id="m-1427622261317439588" timestamp="2025-10-14T14:41:11.037000Z" profile="917728021128032276">обучиться в ФСБ, так как не обучают в МВД</discord-message>
+<discord-message id="m-1427622334948442213" timestamp="2025-10-14T14:41:28.592000Z" profile="917728021128032276">так такого официального отдела нет</discord-message>
+<discord-message id="m-1427622755003662427" timestamp="2025-10-14T14:43:08.741000Z" profile="625255619569647616"><discord-reply slot="reply" author="Dragon_Macalester" avatar="" role-color="#2a88cb"><span data-goto="1427622334948442213">так такого официального отдела нет</span></discord-reply>его в целом нет.</discord-message>
+<discord-message id="m-1427622833256923188" timestamp="2025-10-14T14:43:27.398000Z" profile="625255619569647616">Разрешают изредка администрации старшей поиграть за него, но это было очень давно. Сейчас все что есть, это на БМВ ливрея СК и все</discord-message>
+<discord-message id="m-1427622865661988905" timestamp="2025-10-14T14:43:35.124000Z" profile="625255619569647616">никто уже не играет за эту фраку, все забыли.</discord-message>
+<discord-message id="m-1427630530488303750" timestamp="2025-10-14T15:14:02.561000Z" profile="994164698654187580">Вопрос решен?</discord-message>
+<discord-message id="m-1427630796352786555" timestamp="2025-10-14T15:15:05.948000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Dragon_Macalester" avatar="" role-color="#2a88cb"><span data-goto="1427622203108757505">вот я и спрашиваю</span></discord-reply>24 октября мы добавим Гражданские Операции, на них будет СК, Суд и Прокуратура, конечно СК и Прокуратура не со всеми их правами, но расследовать СК точно будет. Вам нужно немного подождать<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1427639336022835241" timestamp="2025-10-14T15:49:01.964000Z" profile="917728021128032276"><discord-reply slot="reply" author="gagegaming99" avatar="" role-color="#0ba348"><span data-goto="1427630530488303750">Вопрос решен?</span></discord-reply>да</discord-message>
+<discord-message id="m-1427639353546375239" timestamp="2025-10-14T15:49:06.142000Z" profile="917728021128032276"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1427630796352786555">24 октября мы добавим Гражданские Операции, на них будет СК, Суд и Прокуратура, конечно СК и Прокура</span></discord-reply>спасибо большое</discord-message>
+<discord-message id="m-1427646756757442571" timestamp="2025-10-14T16:18:31.205000Z" profile="994164698654187580"><discord-mention type="user">Dragon_Macalester</discord-mention> Закрываю тикет?</discord-message>
+<discord-message id="m-1427646801841885256" timestamp="2025-10-14T16:18:41.954000Z" profile="917728021128032276">+</discord-message>
+<discord-message id="m-1427646849501892761" timestamp="2025-10-14T16:18:53.317000Z" profile="1353009377048662127"><discord-reply slot="reply" author="Dragon_Macalester" avatar="" role-color="#2a88cb"><span data-goto="1427639353546375239">спасибо большое</span></discord-reply>У нас нету СК но есть ливрии на них которые не используются</discord-message>
+<discord-message id="m-1427646891222634556" timestamp="2025-10-14T16:19:03.264000Z" profile="1381962421588988074">🔒Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
