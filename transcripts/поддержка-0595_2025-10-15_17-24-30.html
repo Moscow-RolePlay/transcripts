@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-0595</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/a4fce95828b7dfb33ac5ff1ce2d98193.png?size=1024", "roleColor": "#380066", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/cc31842e3a695a5b315c91af9c481efb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "625255619569647616": {"author": "[MG-003] siksty", "avatar": "https://cdn.discordapp.com/avatars/625255619569647616/23815cfd622a704b2e6950869bece762.png?size=1024", "roleColor": "#dda0dd", "roleIcon": "https://cdn.discordapp.com/role-icons/1411779306333405376/090ae455e895868b024ab33562e8b18f.png?size=1024", "roleName": "Сын Дипломата", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/1961da5b22b2893186f54433f2a45072.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "1360592930607333476": {"author": "robloxghostyy", "avatar": "https://cdn.discordapp.com/avatars/1360592930607333476/98773a01f1111155ce261cff58cfbeb7.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/5ae03a3c0b88aee7a550d3740a937614.png?size=1024", "roleName": "Гражданин России", "bot": false, "verified": false}, "342692728527650820": {"author": "[MG-004] Kopobo4kiN", "avatar": "https://cdn.discordapp.com/avatars/342692728527650820/238735f853f6491e100649fed1f02477.png?size=1024", "roleColor": "#bf0000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181450264412311/15539a6ccbad4266f91cc4fca4f0d812.png?size=1024", "roleName": "Менеджер Сообщества", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/67afa2b14ebc14614dce70dc29d1e5a4.png?size=1024" timestamp="2025-10-15_17-24-30">Тикет Закрыт.<br/>Причина: Тикет закрыт. вопрос решен.<br/>Дата: 2025-10-15_17-24-30<br/><a href="https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0595_2025-10-15_17-24-30.html" style="color: #00aff4;">https://Moscow-RolePlay.github.io/transcripts/transcripts/поддержка-0595_2025-10-15_17-24-30.html</a></discord-message>
+<discord-message id="m-1427358870023438488" timestamp="2025-10-13T21:14:33.659000Z" profile="1381962421588988074"><discord-mention type="user">[MG-003] siksty</discord-mention><discord-embed title=" Новый тикет — Поддержка" slot="embeds" color="#380066" thumbnail="https://cdn.discordapp.com/attachments/1363556047704293517/1423308609642696764/Moscow-RolePlay---Halloween--.png?ex=68f0fa70&is=68efa8f0&hm=97ad443d402442075e01cb7332fd58d7cbbe68fd54b8c99f50fde051f458fe14&"><discord-embed-fields slot="fields"><discord-embed-field field-title="Ваш никнейм в Discord:">123</discord-embed-field><discord-embed-field field-title="Ваш никнейм в Roblox:">1231</discord-embed-field><discord-embed-field field-title="В чём проблема:">1234</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="h1kken_zzz" icon="https://cdn.discordapp.com/avatars/625255619569647616/23815cfd622a704b2e6950869bece762.png?size=1024"></discord-embed-author><discord-embed-footer slot="footer">⏳ Ожидайте ответа от персонала</discord-embed-footer></discord-embed><discord-attachments slot="components"><discord-action-row><discord-button type="secondary">🔒Закрыть Тикет</discord-button></discord-action-row></discord-attachments></discord-message>
+<discord-message id="m-1427359764995637269" timestamp="2025-10-13T21:18:07.037000Z" profile="1133665013794607114"><discord-mention type="user">[MG-003] siksty</discord-mention> </добавить_участника_в_тикет:1426865106331107371></discord-message>
+<discord-message id="m-1427360100569321502" timestamp="2025-10-13T21:19:27.044000Z" profile="625255619569647616">Здравствуйте. Менеджер персонала h1kken \ siksty. Рассматриваю ваши аппеляции.</discord-message>
+<discord-message id="m-1427360333940527114" timestamp="2025-10-13T21:20:22.684000Z" profile="625255619569647616"></discord-message>
+<discord-message id="m-1427360357780815914" timestamp="2025-10-13T21:20:28.368000Z" profile="625255619569647616"></discord-message>
+<discord-message id="m-1427362158748110970" timestamp="2025-10-13T21:27:37.752000Z" profile="625255619569647616">Так. В общем давайте начнем с того что были вы забанены за MRDM в основном.</discord-message>
+<discord-message id="m-1427362422188150935" timestamp="2025-10-13T21:28:40.561000Z" profile="625255619569647616">Суть была в том что я зашел на сервер, как понимаю за вами была погоня, и как обычно было, вы ее судя по всему спровоцировали. В городе сотрудники открыли по вам огонь, а точнее по колесам. Кто то из сотрудников спецназа зажал автоматную очередь по вам, и машина загорелась. Вы не боясь за жизнь выпрыгнули из автомобиля вдвоем и начали тулить по сотрудникам, которых было в 2 раза больше.</discord-message>
+<discord-message id="m-1427362510180454512" timestamp="2025-10-13T21:29:01.540000Z" profile="625255619569647616"><discord-attachments slot="attachments"><discord-attachment type="video" filename="Roblox-2025-10-12T09_51_04.599Z.mp4" url="https://Moscow-RolePlay.github.io/transcripts/attachments/1427362510180454512_1427362510175998042.mp4"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1427363156593873018" timestamp="2025-10-13T21:31:35.657000Z" profile="625255619569647616">по вашим нарушениям с этого фрапса, это E-6, A-1, Fail RP, MRDM. Ранее на вас уже поступали жалобы.</discord-message>
+<discord-message id="m-1427363211870601347" timestamp="2025-10-13T21:31:48.836000Z" profile="625255619569647616">В целом на вас постоянно лились жалобы за РДМ в основном.</discord-message>
+<discord-message id="m-1427363264307920978" timestamp="2025-10-13T21:32:01.338000Z" profile="625255619569647616">То что вы устроите погоню, уедите и растреляете кого то.</discord-message>
+<discord-message id="m-1427363338836246548" timestamp="2025-10-13T21:32:19.107000Z" profile="625255619569647616">Давайте тогда послушаю ваши версии, ваши объяснения по поводу фрапса и в целом про ваше поведение.</discord-message>
+<discord-message id="m-1427363396973756498" timestamp="2025-10-13T21:32:32.968000Z" profile="625255619569647616">и распишите каков смысл вас разбанить, для чего? Что будете делать и не будете.<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1427363419887108096" timestamp="2025-10-13T21:32:38.431000Z" profile="625255619569647616">И там я решу разбанить вас или нт.<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1427494057755545702" timestamp="2025-10-14T06:11:44.926000Z" profile="1360592930607333476"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1427362422188150935">Суть была в том что я зашел на сервер, как понимаю за вами была погоня, и как обычно было, вы ее суд</span></discord-reply>Сотрудник просто так начал за нами ехать. Когда уже подумали что нет вариантов ухезжать, подумали что нас больше. Там был один сотрудник, а не два. После чего когда начали уже стрелять, подьехали ещё побольше людей при чем не сказав там ‘Руки вверх’ Или что то другое. И как администратор, можно было остановить людей в стрелании, и не забнить сразу не сказав причину. Как по, мы ничего не нарушали, если мы смотрели со стороны нас то нас было два и полициеиских один. Извиняюсь если мы как то не так поняли, но всё таки банить сразу не сказав тоже как то не нормально.</discord-message>
+<discord-message id="m-1427613385846947872" timestamp="2025-10-14T14:05:54.960000Z" profile="625255619569647616">Я обязан остановить и предотвратить любые грубые нарушения игроков. На смене если не ошибаюсь было 2 модера, которые не сумели ничего сделать. Сотрудники имеют право сразу открыть по вам огонь, если вы в федеральном розыске, предоставляете особую опасность сотрудникам при исполнении. На тот момент вы открыли по ним огонь, поэтому он спокойно открыл по вам в ответ. По колесам они так же имеют право стрелять в черте города если вы предоставляете особую опасность окружающим</discord-message>
+<discord-message id="m-1427613567946985583" timestamp="2025-10-14T14:06:38.376000Z" profile="625255619569647616">Вы могли сдаться на данном моменте, но вы побежали убивать его, а когда подъехал спецназ со всех сторон, вы продолжили стреляться.<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://Moscow-RolePlay.github.io/transcripts/attachments/1427613567946985583_1427613567577882635.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1427613911729045594" timestamp="2025-10-14T14:08:00.340000Z" profile="625255619569647616"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1427362510180454512">[deleted]</span></discord-reply>К этому ко всему я лично считаю что это NITRP и FRP. Ибо повторюсь, вы постоянно устраиваете погони, и толком РП ситуаций я от вас не вижу. Этот момент это был край. У нас RP сервер. На 0:25 секунде вы прыгали как попрыгунчики и стрелялись со спецназом.</discord-message>
+<discord-message id="m-1427614144655261776" timestamp="2025-10-14T14:08:55.874000Z" profile="625255619569647616">Возможно да, я вам не сообщил о нарушениях, но когда я вижу как вы тулитесь с сотрудниками, прыгаете как попрыгунчики и пытаетесь перетулить, я вас спокойно как рейдеров могу воспринять</discord-message>
+<discord-message id="m-1427614328860704809" timestamp="2025-10-14T14:09:39.792000Z" profile="625255619569647616"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1427363338836246548">Давайте тогда послушаю ваши версии, ваши объяснения по поводу фрапса и в целом про ваше поведение.</span></discord-reply>.</discord-message>
+<discord-message id="m-1427614354253287454" timestamp="2025-10-14T14:09:45.846000Z" profile="625255619569647616"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1427363396973756498">и распишите каков смысл вас разбанить, для чего? Что будете делать и не будете.</span></discord-reply>.</discord-message>
+<discord-message id="m-1427718741994639390" timestamp="2025-10-14T21:04:33.823000Z" profile="1360592930607333476"><discord-reply slot="reply" author="[MG-003] siksty" avatar="" role-color="#dda0dd"><span data-goto="1427363396973756498">и распишите каков смысл вас разбанить, для чего? Что будете делать и не будете.</span></discord-reply>Здравствуйте!<br/>Извините, что так долго не отвечала была немного занята. Мы с другом действительно не знали, что нельзя стрелять по сотрудникам, если их больше, чем нас, а также что запрещено прыгать во время стрельбы. Теперь мы понимаем свою ошибку и обязательно ознакомимся с правилами проекта, чтобы впредь не нарушать их.<br/>Обещаем, что подобное больше не повторится. Просим снять бан и дать нам возможность исправиться.<br/>Спасибо за понимание!</discord-message>
+<discord-message id="m-1428025659627667547" timestamp="2025-10-15T17:24:08.689000Z" profile="342692728527650820"><discord-reply slot="reply" author="robloxghostyy" avatar="" role-color="#2a88cb"><span data-goto="1427718741994639390">Здравствуйте!
+Извините, что так долго не отвечала была немного занята. Мы с другом действительно не </span></discord-reply>Здравствуйте! разблокировали вам и вашему другу аккаунты, ознакомьтесь с правилами #📚┃правила-и-документация, приятной игры!</discord-message>
+<discord-message id="m-1428025671195693227" timestamp="2025-10-15T17:24:11.447000Z" profile="342692728527650820">Тикет закрываю.</discord-message>
+<discord-message id="m-1428025747968229436" timestamp="2025-10-15T17:24:29.751000Z" profile="1381962421588988074">🔒Тикет закроется через несколько секунд...</discord-message>
+</discord-messages></body></html>
